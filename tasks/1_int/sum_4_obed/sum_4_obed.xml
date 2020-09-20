@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem  package = "ru.ejudge.2012_advanced_11"
+   id = "1"   type = "standard">
+	<statement>
+		<description>
+        
+<p><img src="https://stepik.org/media/attachments/lesson/403872/6price.png" height=100 ></img></p>
+<p>
+Студент хочет купить на обед в столовой. <b>1</b> порцию риса за <b>k_rice</b> рублей и <b>2</b> салата за <b>k_veg</b> рублей каждый.<br/> 
+Вычислите и напечатайте, сколько стоит обед.
+</p>
+<p><b>English</b></p>
+<p>
+Student wants to buy <b>1</b> cup of rice for <b>k_rice</b> dollars each and 2 salads for <b>2</b> for <b>k_veg</b> dollars each.<br/> 
+Print the cost of his meal.
+</p>
+		</description>
+		<input_format>
+<p>Целые числа <b>k_rice</b> и <b>k_veg</b> </p>
+		</input_format>
+		<output_format>
+<p>Сколько стоит обед</p>
+		</output_format>
+<notes>Автор: Овсянникова Т.В.
+</notes>
+	</statement>
+	<examples>
+		<example>
+			<input>
+15 30
+			</input>
+			<output>
+75			
+			</output>
+		</example>
+	</examples>
+</problem>
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem  package = "ru.ejudge.2012_advanced_11"
+   id = "1"   type = "standard">
+	<statement language="ru_RU">
+		<description>
+        
+<p><img src="https://stepik.org/media/attachments/lesson/403872/table_definition.png"></img></p>
+
+<p><b>Русский</b></p>
+<p>Взяли 4 ножки и 1 столешницу. Получили 1 стол. <br/>Дано N ножек. Напечатать, сколько из них можно сделать столов?</p>
+
+<p><img src="https://stepik.org/media/attachments/lesson/403872/table_div.png"></img></p>
+
+<p><b>English</b></p>
+<p>1 table has 1 table-cup and 4 legs.<br/> How many tables can be made from N legs? </p>
+<!--
+<table border="1">
+    <tr>
+        <th>
+        Язык программирования<br/>Programming language
+        </th><th>
+        Выражение<br/>Expression
+        </th><th>
+        Результат<br/>Result
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="2">C, C++, Java
+        </td><td> 7 / 2
+        </td><td> 3
+        </td>
+    </tr>
+    <tr>
+        <td>7 % 2
+        </td><td>1
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="2">Python 3
+        </td><td> 7 // 2
+        </td><td> 3
+        </td>
+    </tr>
+    <tr>
+        <td>7 % 2
+        </td><td>1
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="2">Pascal
+        </td><td> 7 div 2
+        </td><td> 3
+        </td>
+    </tr>
+    <tr>
+        <td>7 mod 2
+        </td><td>1
+        </td>
+    </tr>
+</table>
+-->
+		</description>
+		<input_format>
+			<p>1 целое число K. (1 integer number)</p>
+		</input_format>
+		<output_format>
+			<p>1 число количество столов.</p>
+		</output_format>
+<notes>Автор: Овсянникова Т.В.
+</notes>
+	</statement>
+	<examples>
+		<example>
+			<input>
+12				
+			</input>
+			<output>
+3				
+			</output>
+		</example>
+		<example>
+			<input>
+11				
+			</input>
+			<output>
+2				
+			</output>
+		</example>
+	</examples>
+</problem>
+

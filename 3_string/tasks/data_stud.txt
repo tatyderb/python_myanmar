@@ -1,0 +1,6 @@
+Petrov
+Ivanov,6,8,5,6
+Petrov,4,3
+Sidorova,7,9,8
+Kolos,8
+Petrova,7,5

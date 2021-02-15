@@ -1,0 +1,4 @@
+apple 5
+orange 3.5
+grapes 1.2
+apple 7

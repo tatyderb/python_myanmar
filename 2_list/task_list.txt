@@ -1,0 +1,71 @@
+# 0_list_index.md - list (список)
+
+## TASKINLINE расстояние от x=0 до точки с номером i
+## TASKINLINE расстояние от точки с номером 0 до точки с номером i
+## TASKINLINE расстояние от точки с номером i до точки с номером k
+
+# 1_for_list.md - 
+
+## TASKINLINE Напечатать числа > 10
+## TASKINLINE Напечатать сначала четные числа, потом нечетные
+## TASKINLINE сумма чисел
+## TASKINLINE сумма четных чисел
+
+# 13_slice.md - 
+
+## TASKINLINE весь список
+## TASKINLINE второе число
+## TASKINLINE предпоследнее число
+## TASKINLINE без первого числа
+## TASKINLINE без последнего числа
+## TASKINLINE через одного
+## TASKINLINE со второго через одного
+## TASKINLINE наоборот
+## TASKINLINE наоборот от предпоследнего
+
+# 2_max.md - Однопроходные алгоритмы
+
+## max
+## TASKINLINE Очень холодно  - min
+## TASKINLINE Еще один арбуз - sort2
+## TASKINLINE Два больших арбуза - первый и второй максимум
+
+# 25_break.md - break, continue
+
+## ряд яблок с яблонями
+## TASKINLINE Вороны отнимают яблоки
+## TASKINLINE Бонус храброму - дошел до конца ряда - получи бонус
+## TASKINLINE Сад
+## TASKINLINE Сад с воронами
+## TASKINLINE Премия в конце работы - дошел до конца сада - получи бонус
+
+# 26_index.md - индексы
+
+## TASKINLINE Поровну
+## TASKINLINE Все индексы - найти все индексы числа x
+## TASKINLINE Последний индекс
+## TASKINLINE Последний индекс или -1
+## TASKINLINE Первый индекс или -1
+## TASKINLINE Горы (локальный максимум)
+## TASKINLINE Поменять первый и последний элементы местами
+## TASKINLINE Поменять min и max элементы местами
+
+# 27_kupetz.md - задача про купца
+
+## TASKINLINE Напишем функцию, которая делит конфеты для двух детей
+## TASKINLINE Вся задача про конфеты
+
+# 28_append.md - изменение длины списка
+
+## TASKINLINE первый-второй - собрать
+## TASKINLINE первый-второй - разобрать
+## TODO TASKINLINE первый-последний собрать (сумма)
+## TASKINLINE Уникальные элементы
+## TASKINLINE пересечение множеств
+## TASKINLINE Скобки-1
+
+## TODO TASKINLINE Скобки-2
+## TODO TASKINLINE Вычисление арифметического выражения со скобками
+
+
+

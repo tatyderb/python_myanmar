@@ -1,7 +1,5 @@
 import sys
 
-total = 0                       # в total будет сумма килограмм
-
 file = sys.stdin
 
 name = file.readline()          # отдельно читаем первую строку

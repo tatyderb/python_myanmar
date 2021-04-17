@@ -78,13 +78,15 @@ print(s2)       # Myanmar Russia - s2 это новая строка
 
 ## slice - часть строки или списка
 
-![](https://sehn.tech/learning/intro-cs/images/string_slicing.png)
+![строка и индексы](https://sehn.tech/ox-hugo/string_slicing.png)
 
 * **s[от:до]** - часть строки (или списка) от (включая) до (НЕ включая)
 * **s[от:до:шаг]** - часть строки (или списка) от (включая) до (НЕ включая), +шаг
 
+
+
 ```python
-s = 'Monty Pyton'
+s = 'Monty Python'
 ```
 | Код | Равен | Что делает |
 |----|----|--------|

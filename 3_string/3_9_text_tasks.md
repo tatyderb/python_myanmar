@@ -28,9 +28,9 @@ import sys
 
 total = 0                       # в total будет сумма килограмм
 
-file = sys.stdin
+fin = sys.stdin
 
-for line in file:               # для каждой строки с клавиатуры
+for line in fin:                # для каждой строки с клавиатуры
     fruit, kg = line.split()    # разделим строку по пробелу на фрукт и вес
     kg = float(kg)              # вес - это число
     total = total + kg
@@ -202,12 +202,12 @@ Petrova,7,5
 ```python
 import sys
 
-file = sys.stdin
+fin = sys.stdin
 
-name = file.readline()          # отдельно читаем первую строку
+name = fin.readline()           # отдельно читаем первую строку
 name = name.rstrip()            # удаляем пробелы в конце строки
 
-for line in file:               # для каждой ОСТАЛЬНОЙ строки
+for line in fin:                # для каждой ОСТАЛЬНОЙ строки
     data = line.split(',')      # разделим строку по ,
     if name == data[0]:         # нам нужен только один студент
         grades = list(map(int, data[1:]))

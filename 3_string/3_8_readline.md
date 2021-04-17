@@ -324,9 +324,9 @@ Sidorova 7 9 8
 ```python
 import sys
 
-file = sys.stdin                    # данные будем читать с клавиатуры
+fin = sys.stdin                     # данные будем читать с клавиатуры
 
-for line in file:                   # для каждой строки с клавиатуры
+for line in fin:                    # для каждой строки с клавиатуры
     s = line.split()                # разбили строку на слова
     first_name = s[0]               # фамилия - первое слово
     grades = list(map(int, s[1:]))  # остальные слова - числа
@@ -359,4 +359,3 @@ python student_all.py
 
 * **Ctrl+Z** - Windows
 * **Ctrl+D** - Linux, Mac
-

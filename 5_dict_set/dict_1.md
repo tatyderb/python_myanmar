@@ -360,3 +360,38 @@ d = {
 | `d.get('Mike')]` | None |
 | `d.get('Mike', 2)]` | 2 |
 
+## TASKINLINE дешевые фрукты
+
+Дан список фрукт и его цена за 1 кг (целое число).
+
+Сделайте из списка словарь. Если фрукт повторяется, хранить минимальную цену.
+
+TEST
+apple 150
+orange 87
+apple 90
+apple 100
+----
+{
+    "apple": 90,
+    "orange": "87"
+}
+====
+apple 50
+banana 90
+orange 60
+grape 100
+mango 80
+banana 84
+apple 110
+lemon 120
+----
+{
+    "apple": 50,
+    "banana": 84,
+    "orange": 60,
+    "grape": 100,
+    "mango": 80,
+    "lemon": 120
+}
+====

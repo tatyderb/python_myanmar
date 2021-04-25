@@ -1,0 +1,21 @@
+{
+    "mathematics": {
+    "Ivanov": 6,
+    "Petrov": 8,
+    "Lan Han": 10,
+    "Jhon Smith": 4,
+    "Arkar Kyaw": 8
+    },
+    "russian language": {
+         "Jhon Smith": 7,
+         "Lan Han": 6,
+         "Arkar Kyaw": 7
+    },
+    "physics": {
+        "Ivanov": 8,
+        "Petrov": 6,
+        "Jhon Smith": 6
+    },
+    "informatica": {
+    }
+}

@@ -1,216 +1,139 @@
-# Методы словарей
+# dict.get
 
-lesson = 527241
+lesson = 522726
 
-## Цикл со словарем
+## dictionary comprehensions
 
-Цикл можно перебирать
+Краткая запись создания словаря.
 
-Оценки студентов за контрольную:
+Ключ - число, значение - квадрат числа. Сделаем словарь для чисел от 0 до 10.
+
 ```python
-grades = {
+# dict comprehensions:
+square1 = {x : x*x for x in range(10) }                              
+# задаем явно пары ключ=значение
+square2 = {0=0, 1=1, 2=4, 3=9, 4=16, 5=25, 6=36, 7=49, 8=64, 9=81}  
+```
+или словарь $\sqrt{x}$ для целых квадратов:
+```python
+sqrtn1 = {x*x : x for x in range(10) }
+sqrtn2 = {0=0, 1=1, 4=2, 9=3, 16=4, 25=5, 36=6, 49=7, 64=8, 81=9}  
+```
+
+## Если значения нет
+
+Если ключа в словаре нет, то будет ошибка. В списке нет студента 'Mike'. Попробуем узнать его оценку.
+```python
+x = grades['Mike']
+```
+получим
+```cpp
+Traceback (most recent call last):
+  File "C:\Users\tatyd\Downloads\my.py", line 15, in <module>
+    x = grades['Mike']
+KeyError: 'Mike'
+```
+В ошибке написано, какого ключа нет. 
+
+## QUIZ Чему равно
+
+```python
+capitals = {
+    'Russia': 'Moscow', 
+    'Ukraine': 'Kiev', 
+    'USA': 'Washington', 
+    'Myanmar':'Naypyidaw', 
+    'Mongolia':'Ulaanbaatar', 
+    'China':'Beijing'
+}
+print(capitals[0])
+```
+Какой результат?
+
+A. 'Russia'
+B. 'Moscow'
+C. 0
+D. KeyError
+
+ANSWER: D
+
+## in и get
+
+Кто пришел на зачет, оценку записали в словарь. Кто не пришел, нужно поставить 2.
+
+Можно проверять **in** есть такой ключ в словаре или нет:
+```python
+if student in grades:
+    score = grades[student]
+else:
+    score = 2                # кто не пришел на зачет, получил 2
+```
+
+Можно взять значение функцией **get(key, default_value=None)**.
+
+* `key` - ключ
+* `default_value` - значение, если ключа нет
+	* по умолчанию `None`
+	
+```python
+score = grades.get(student, 2)
+```	
+
+## Пример get
+
+```python
+d = {
     'Bob': 7,
     'Alex': 5,
     'David': 8,
     'Charly': 2
 }
 ```
-Переберем по 1 студенту и напечатаем их красиво
-```python
-for name in grades:
-	print(name, grades[name])
-```
-получим
-```python
-Bob 7
-Alex 5
-David 8
-Charly 2
-```
+| Код | Результат |
+|----|----|
+| `d['Alex']` | 5 |
+| `d.get('Alex')]` | 5 |
+| `d.get('Alex', 2)]` | 5 |
+| `d['Charly']` | 2 |
+| `d.get('Charly')]` | 2 |
+| `d['Mike']` | KeyError |
+| `d.get('Mike')]` | None |
+| `d.get('Mike', 2)]` | 2 |
 
-## Методы словаря для перебора
+## TASKINLINE дешевые фрукты
 
-* **keys()** - список ключей
-* **values()** - список значений
-* **items()** - список пар (ключ, значение)
+Дан текст. На каждой строке фрукт и его цена за 1 кг (целое число).
 
-### Перебор по ключам
+Сделайте из текста словарь. Если фрукт повторяется, хранить минимальную цену.
 
-**keys()** - cловарь перебираем по ключам:
-```python
-for student in grades.keys():
-    print(student, grades[student])
-```
-То же самое:
-```python
-for student in grades:          # словарь перебираем по ключам
-    print(student, grades[student])
-```
-
-Зачем нужно **keys()**, если работает перебор по словарю? Можно отсортировать ключи и напечатать по алфавиту:
-
-```python
-for student in sorted(grades.keys()):
-    print(student, grades[student])
-```
-
-## Перебор по значениям
-
-**values()** - список значений.
-
-```python
-for v in grades.values():   # словарь перебираем по значениям
-    print(v)
-```
-Помните, значения могут совпадать. Разные студенты (ключ) могут получить оценку 8 (значение).
-
-Порядок в `keys()` и `values()` совпадает. То есть
-```python
-dict(zip(d.keys(), d.values()))  # совпадает с d
-```
-Получим такой же словарь `d`.
-
-## Перебор по парам
-
-**items()** - список пар (ключ, значение)
-
-```python
-for student, score in grades.items():
-    print(student, score)
-```
-То же самое, но работает медленнее:
-```python
-for student in grades:          
-    print(student, grades[student])
-```
-
-## Методы keys(), values(), items()
-
-Словарь:
-```python
->>> print(grades)
-{'Hein': 10, 'Arkar': 8, 'Sai': 9, 'Thaw': 7, 'Lin': 8}
->>> print(type(grades))
-<class 'dict'>
-```
-Ключи:
-```python
->>> print(grades.keys())
-dict_keys(['Hein', 'Arkar', 'Sai', 'Thaw', 'Lin'])
->>> print(type(grades.keys()))
-<class 'dict_keys'>
-```
-Значения:
-```python
->>> print(grades.values())
-dict_values([10, 8, 9, 7, 8])
->>> print(type(grades.values()))
-<class 'dict_values'>
-```
-Пары (ключ, значение):
-```python
->>> print(grades.items())
-dict_items([('Hein', 10), ('Arkar', 8), ('Sai', 9), ('Thaw', 7), ('Lin', 8)])
->>> print(type(grades.items()))
-<class 'dict_items'>
-```
-
-## Свойства ключей и значений
-
-* **ключ** - должен быть **уникальным** и **неизменяемым** (на самом деле хешируемым, но об этом термине узнаем позже).
-* **значение** - может быть любое
-
-* Неизменяемые (unmutable) типы: строки `'Moscow'`, числа `12`, кортеж `(1, 3, 17)` и другие.
-* Изменяемые типы (mutable) типы: списки `[1, 3, 17]`
-
-## TASKINLINE Счетчик чисел
-
-Даны числа. Напечатать число и сколько раз оно встретилось. 
-
-Для решения использовать словарь `d[number] = count`, где 
-
-* `number` - число
-* `count` - сколько раз оно встретилось
+Напечатайте словарь красиво.
 
 TEST
-1 4 6 2 3 6 3 0 2 4 2 2 4
+apple 150
+orange 87
+apple 90
+apple 100
 ----
-1 1
-4 3
-6 2
-2 4
-3 2
-0 1
+{
+    "apple": 90,
+    "orange": 87
+}
 ====
-1 1 1 1 1
+apple 50
+banana 90
+orange 60
+grape 100
+mango 80
+banana 84
+apple 110
+lemon 120
 ----
-1 5
+{
+    "apple": 50,
+    "banana": 84,
+    "orange": 60,
+    "grape": 100,
+    "mango": 80,
+    "lemon": 120
+}
 ====
--3 124 82 90123
-----
--3 1
-124 1
-82 1
-90123 1
-====
-
-## TASKINLINE Без повторов
-
-Даны числа. Напечатать числа. Убрать повторения.
-
-TEST
-1 4 6 2 3 6 3 0 2 2 2 4
-----
-1 4 6 2 3 0
-====
-1 1 1 1 1
-----
-1
-====
--3 124 82 90123
-----
--3 124 82 90123
-====
-
-## TASKINLINE Уникальные
-
-Даны числа. Напечатать только уникальные числа у которых не было повторений.
-
-TEST
-1 4 6 2 3 6 3 0 2 2 2 4
-----
-1 0
-====
-1 1 1 1 1 11
-----
-11
-====
--3 124 82 90123
-----
--3 124 82 90123
-====
-
-## TASKINLINE Без повторов
-
-Даны числа. Каждое число печатать только 1 раз. Напечатать числа в том порядке, в котором они встретились в первый раз.
-
-Возможно, вы уже решили эту задачу.
-
-TEST
-1 4 6 2 3 6 3 0 2 2 2 4
-----
-1 4 6 2 3 0
-====
-1 1 1 1 1
-----
-1
-====
--3 124 82 90123
-----
--3 124 82 90123
-====
-
-
-
-
-

@@ -33,13 +33,20 @@ uzor(50, <b>3</b>) нарисует (**3 раза по 2 фигуры**):
 
 ![img/for/uzor1_2.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/uzor1_2.png)
 
-**+3 балла, если функция умеет рисовать любое количество фигур**
+## Задача 2.5 (6 баллов)
+
+
+Написать функцию  **uzor(size, n)**, где **n - общее количество фигур** (а не количество повторении). Например:
+
+uzor(50, <b>6</b>) нарисует (**6 фигур**):
+
+![img/for/uzor1_2.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/uzor1_2.png)
 
 uzor(50, <b>3</b>) нарисует (**3 фигуры**):
 
 ![img/for/uzor1_2_2.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/uzor1_2_2.png)
 
-## Задача 2.5 (5 баллов)
+## Задача 2.6 (5 баллов)
 
 Написать функцию **grid(n, m)**. Функция `grid(6, 8)` нарисует:
 
@@ -48,7 +55,7 @@ uzor(50, <b>3</b>) нарисует (**3 фигуры**):
 Подсказка: рисовать линии, а не квадраты.
 
 
-## Задача 2.6 (2 балла)
+## Задача 2.7 (2 балла)
 
 Написать функцию **fig3(size1, size2)**
 

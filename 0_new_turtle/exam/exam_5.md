@@ -28,26 +28,32 @@ lesson = 544469
 
 ## Задача 5.4 (3 балла)
 
-Написать функцию **uzor(size, n)**. Она рисует узор из n **пар** фигур.
+Написать функцию **uzor(size, n)**. Она рисует узор из n **повторений** фигур.
 
 uzor(50, <b>2</b>) нарисует (**2 раза по 4 фигуры**):
 
 ![img/for/t2_5_1.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/t2_5_1.png)
 
-**+3 балла, если функция умеет рисовать любое количество фигур**
+## Задача 5.5 (6 баллов)
+
+Написать функцию  **uzor(size, n)**, где **n - общее количество фигур** (а не количество повторении). Например:
+
+uzor(50, <b>8</b>) нарисует (**8 фигур**):
+
+![img/for/t2_5_1.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/t2_5_1.png)
 
 uzor(50, <b>3</b>) нарисует (**3 фигуры**):
 
 ![img/for/t2_5_2.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/t2_5_2.png)
 
-## Задача 5.5 (5 баллов)
+## Задача 5.6 (5 баллов)
 
 Написать функцию **grid(n, m)**. Функция `grid(6, 8)` нарисует:
 
 ![img/for2/grid4.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for2/grid5.png)
 
 
-## Задача 5.6 (2 балла)
+## Задача 5.7 (2 балла)
 
 Написать функцию **fig2(size1, size2)**
 

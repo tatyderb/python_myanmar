@@ -1,10 +1,12 @@
 # Вариант 3
 
+lesson = 544467
+
 ## Задача 3.1 (2 балла)
 
 Напишите программу. Программа рисует:
 
-![img/simple/p3.png](img/simple/p3.png)
+![img/simple/p3.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/simple/p3.png)
 
 ## Задача 3.2 (2 балла)
 
@@ -13,7 +15,7 @@
 * Сторона квадрата размера **size1**.
 * Сторона треугольника размера **size2**.
 
-![img/simple/pf3.png](img/simple/pf3.png)
+![img/simple/pf3.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/simple/pf3.png)
 
 ## Задача 3.3 (2 балла)
 
@@ -23,7 +25,7 @@
 
 Рисовать только треугольник. Писать `x1 y1 x2 y2` НЕ надо.
 
-![img/geom/kr4_1.png](img/geom/kr4_1.png)
+![img/geom/kr4_1.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/geom/kr4_1.png)
 
 ## Задача 3.4 (3 балла)
 
@@ -31,19 +33,19 @@
 
 uzor(50, <b>3</b>) нарисует (**3 раза по 2 фигуры**):
 
-![img/for/t2_3.png](img/for/t2_3.png)
+![img/for/t2_3.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/t2_3.png)
 
 **+3 балла, если функция умеет рисовать любое количество фигур**
 
 uzor(50, <b>3</b>) нарисует (**3 фигуры**):
 
-![img/for/t2_3_2.png](img/for/t2_3_2.png)
+![img/for/t2_3_2.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for/t2_3_2.png)
 
 ## Задача 3.5 (5 баллов)
 
 Написать функцию **grid(n, m)**. Функция `grid(6, 8)` нарисует:
 
-![img/for2/grid3.png](img/for2/grid3.png)
+![img/for2/grid3.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/for2/grid3.png)
 
 
 ## Задача 3.6 (2 балла)
@@ -60,5 +62,5 @@ uzor(50, <b>3</b>) нарисует (**3 фигуры**):
 
 | `fig2(100, 'green', 50, 'red')` | `fig2(30, 'red', 100, 'blue')` | Дополнительно: `fig2(100, 'blue', 100, 'green')` |
 |----|----|----|
-| ![img/if/if2_3_1.png](img/if/if2_3_1.png) |  ![img/if/if2_3_2.png](img/if/if2_3_2.png)  | ![img/if/if2_3_3.png](img/if/if2_3_3.png) |
+| ![img/if/if2_3_1.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/if/if2_3_1.png) |  ![img/if/if2_3_2.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/if/if2_3_2.png)  | ![img/if/if2_3_3.png](https://raw.githubusercontent.com/tatyderb/python_myanmar/master/0_new_turtle/exam/img/if/if2_3_3.png) |
 

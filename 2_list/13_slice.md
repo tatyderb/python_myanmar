@@ -78,7 +78,7 @@ print(s2)       # Myanmar Russia - s2 это новая строка
 
 ## slice - часть строки или списка
 
-![строка и индексы](https://sehn.tech/ox-hugo/string_slicing.png)
+![строка и индексы](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 * **s[от:до]** - часть строки (или списка) от (включая) до (НЕ включая)
 * **s[от:до:шаг]** - часть строки (или списка) от (включая) до (НЕ включая), +шаг
@@ -104,7 +104,7 @@ s = 'Monty Python'
 
 ## QUIZ Индекс
 
-![](https://sehn.tech/learning/intro-cs/images/string_slicing.png)
+![](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
 s = 'Monty Python'
@@ -128,7 +128,7 @@ ANSWER: A, B, D, E
 
 ## QUIZ Индекс минус
 
-![](https://sehn.tech/learning/intro-cs/images/string_slicing.png)
+![](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
 s = 'Monty Python'
@@ -146,7 +146,7 @@ ANSWER: A, B
 
 ## QUIZ Slice
 
-![](https://sehn.tech/learning/intro-cs/images/string_slicing.png)
+![](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
 s = 'Monty Python'
@@ -166,7 +166,7 @@ ANSWER: B, D
 
 ## QUIZ Slice minus
 
-![](https://sehn.tech/learning/intro-cs/images/string_slicing.png)
+![](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
 s = 'Monty Python'

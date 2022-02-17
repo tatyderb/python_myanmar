@@ -107,7 +107,7 @@ print(v)                                # печатаем результат
 
 **Написать функцию** `dist(x1, y1, x2, y2)`, которая вычисляет расстояние между ними по формуле $$c^2 = (x_1 - x_2)^2 + (y_1 - y_2)^2$$
 
-<img src="http://judge2.vdi.mipt.ru/tasks/func/length2D.png" width=300 />
+<img src="https://stepik.org/media/attachments/lesson/408292/length2D.png" width=300 />
 
 ```python
 from math import sqrt  # функция вычисляет квадратный корень
@@ -149,7 +149,7 @@ TEST
 
 **Напишите функцию** `area(x1, y1, x2, y2, x3, y3)`, которая вычисляет площадь треугольника со сторонами $a, b, c$ по формуле $$s = \sqrt {p \cdot (p - a) \cdot (p - b) \cdot (p-c)}$$, где $p = (a + b + c) / 2$
 
-<img src="http://judge2.vdi.mipt.ru/tasks/func/geron.jpg" width=300 />
+<img src="https://stepik.org/media/attachments/lesson/408292/geron.jpg" width=300 />
 
 ```python
 from math import sqrt  # функция вычисляет квадратный корень

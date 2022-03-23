@@ -86,6 +86,8 @@ orange 3.5*100
 
 Все покупки стоят $5 \cdot 200 + 3.5 \cdot 100 = 1350$ рублей
 
+CONFIG
+checker: std_float_seq
 TEST
 apple 5*200
 orange 3.5*100
@@ -110,6 +112,8 @@ apple 7*1
 
 Найдите самую тяжелую покупку (больше всего килограмм).
 
+CONFIG
+checker: std_float_seq
 TEST
 5=apple
 3.5=orange

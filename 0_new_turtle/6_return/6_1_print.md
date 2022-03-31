@@ -1,6 +1,6 @@
 # print
 
-lesson = 
+lesson = 515007
 
 ## Черепаха умеет писать текст
 
@@ -9,9 +9,9 @@ lesson =
 Черепаха умеет писать текст.
 
 ```python
-t.write('Start')
+t.write('Hello')
 ```
-Напишет текст `Start` в том месте, где стоит черепаха.
+Напишет текст `Hello` в том месте, где стоит черепаха.
 
 Написать текст размера 18:
 ```python
@@ -26,7 +26,42 @@ print('Start')
 ```
 
 В программе:
+```python
+import turtle
 
+t = turtle.Turtle()
+t.shape('turtle')
+t.color('blue')
+
+t.write('Hello', font=('Arial', 18, 'normal'))  # поле черепахи
+print('start')                                  # console
+print('stop')                                   # console
+
+t.fd(150)
+t.rt(90)
+t.color('red')
+t.write('End', font=('Arial', 18, 'normal'))    # поле черепахи
+```
+
+## консоль (console)
+
+Что такое консоль и где ее найти?
+
+### replit.com
+
+![replit console](https://stepik.org/media/attachments/lesson/515007/replit_console.png)
+
+### IDLE
+
+![IDLE console](https://stepik.org/media/attachments/lesson/515007/idle_console.png)
+
+### PyCharm
+
+![PyCharm console]()
+
+### Другая?
+
+Не нашли свой пример? Пошлите снимок своего экрана и покажите в нем консоль.
 
 ## Разница между print и write
 
@@ -41,25 +76,13 @@ print('Start')
 
 Функция `print` есть всегда. import для нее не нужен. Такие функции называют **встроенные функции** (build-in functions).
 
-## консоль (console)
+## TASKTEXT Имя и страна
 
-Что такое консоль и где ее найти?
+* Напишите синими буквами на **поле с черепахой** ваше **имя**.
+* Напишите **в консоли** название вашей **страны**.
 
-### replit.com
-
-![replit console]()
-
-### IDLE
-
-![IDLE console]()
-
-### PyCharm
-
-![PyCharm console]()
-
-### Другая?
-
-Не нашли свой пример? Пошлите снимок своего экрана и покажите в нем консоль.
+Мое имя Tanya. Моя страна Russia. Моя программа пишет:
+![name_country.png](https://stepik.org/media/attachments/lesson/515007/name_country.png)
 
 ## Без черепахи
 
@@ -76,11 +99,11 @@ print('Hello!')
 
 Если черепаха не нужна, можно использовать replit для python без черепахи.
 
-![Hello на replit]()
+![Hello на replit](https://stepik.org/media/attachments/lesson/515007/repl_hello.png)
 
 ### IDLE
 
-![Hello на IDLE]()
+![Hello на IDLE](https://stepik.org/media/attachments/lesson/515007/idle_hello.png)
 
 ### PyCharm
 
@@ -115,6 +138,8 @@ stepik умеет сам проверять задачи без черепахи
 * Нажмите **Run**. Запустите код локально у вас на компьютере или телефоне.
 * Проверьте, что код работает правильно. Исправьте ошибки, если нужно.
 * Нажмите **Submit**. Пошлите код на проверку.
+
+![stepik](https://stepik.org/media/attachments/lesson/515007/stepik_task.png)
 
 Как проверяет stepik? 
 

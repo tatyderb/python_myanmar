@@ -1,3 +1,1 @@
-print('Как тебя зовут?')
-name = input()
-print(f'Здравствуй, {name}!')
+print('Hello, world!')

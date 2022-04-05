@@ -1,0 +1,34 @@
+contests\c\arr\arr_m\arr_m_kr\arr_m_kr_task1_print\
+1 arr_mk_1 - номера чисел равных 0.
+2 arr_mk_2 - номера четных чисел.
+3 arr_mk_3 - четные числа
+arr_mk_4 - числа <= 0
+4 arr_mk_5 - числа <= 10
+5 arr_mk_6 - числа 0 <= x <= 10
+arr_mk_7 - НОМЕРА элементов, которые равны 'X' 
+arr_mk_8 - НОМЕР первого элемента (начиная с 0), который равен 'X'
+arr_mk_9 - СКОЛЬКО элементов  равных 'X'
+arr_mk_10 - СКОЛЬКО чисел > 0
+arr_mk_11 - СКОЛЬКО чисел < 0
+arr_mk_12 - СКОЛЬКО чисел < 20
+arr_mk_13 - СКОЛЬКО чисел < 10
+....
+arr_mk_31 ....
+
+
+contests\c\arr\arr_m\arr_m_kr\arr_m_kr_task2_sum
+arr_mk_sum_1 - Разность суммы 5 первых и 5 последних чисел.
+arr_mk_sum_2 - Разность суммы чисел с четными и нечетными номерами.
+arr_mk_sum_3 - Разность суммы k первых и k последних чисел..
+arr_mk_sum_4 - c[i] = a[i] + b[i]
+arr_mk_sum_5 - c[i] = a[i] - b[i]
+arr_mk_sum_6 - c[i] = min(a[i], b[i])
+arr_mk_sum_7 - c[i] = max(a[i], b[i])
+arr_mk_sum_8 - b[i] = max(a[2i], a[2i+1])
+arr_mk_sum_9 - b[i] = min(a[2i], a[2i+1])
+arr_mk_sum_10 - b[i] = max(a[i], a[9-i])
+arr_mk_sum_11 - b[i] = min(a[i], a[9-i])
+arr_mk_sum_12 - b[i] = sum(a[i], a[9-i])
+ - разность суммы четных и нечетных чисел
+ - проверить, что палиндром
+

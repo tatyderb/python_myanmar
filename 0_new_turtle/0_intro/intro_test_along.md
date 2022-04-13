@@ -97,6 +97,8 @@ end.
 
 Write a program that finds the sum of two numbers.  
 
+CONFIG
+score: 5
 TEST
 8 11
 ----
@@ -127,6 +129,8 @@ TEST
 
 Вычислите и напечатайте, сколько стоит обед.
 
+CONFIG
+score: 5
 TEST
 15 30
 ----
@@ -155,6 +159,8 @@ TEST
 * Напечатайте **YES** (большими буквами!), если студенту хватит денег на обед.
 * Напечатайте **NO** (большими буквами!), если студенту НЕ хватит денег на обед.
 
+CONFIG
+score: 5
 TEST
 100 15 30
 ----
@@ -198,6 +204,9 @@ NO
 
 Calculate the sum of the numbers which are divisible by 7, then print this sum.
 
+CONFIG
+score: 5
+visible_tests: 3
 TEST
 4
 7 2 9 21
@@ -245,6 +254,8 @@ How many apples remain?
 
 For 3 children with 2, 7, 4 apples, each child should has 4 apples. They are change apple quantity for 2, -3, 0 apples. Remainder is 1.
 
+CONFIG
+visible_tests: 3
 TEST
 3
 2 7 4
@@ -306,6 +317,9 @@ Integer 3 ≤ N ≤ 100. N integer via spaces on next line.
 
 3 numbers per line via spaces. Keep the original order.
 
+CONFIG
+score: 15
+visible_tests: 6
 TEST
 6
 1 2 3 3 2 1
@@ -348,6 +362,21 @@ TEST
 ----
 92 92 45
 50 98 81
+====
+6
+1 2 3 1 2 3
+----
+1 2 3
+2 3 1
+3 1 2
+1 2 3
+====
+7
+1 2 3 0 3 2 1
+----
+1 2 3
+3 0 3
+3 2 1
 ====
 
 ## TASKINLINE sudoku

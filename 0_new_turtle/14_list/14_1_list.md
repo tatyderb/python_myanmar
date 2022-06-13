@@ -310,7 +310,18 @@ turtle.done()
 
 ![часть узора](https://stepik.org/media/attachments/lesson/509283/uzor_v1en.png)
 
-
+Делаем из координат `x` и `y` точку `p`:
+```python
+p = (x, y)
+```
+Делаем из точки `p` координаты `x` и `y`:
+```python
+x, y = p
+```
+или
+```python
+x, y = t.pos()
+```
 
 
 

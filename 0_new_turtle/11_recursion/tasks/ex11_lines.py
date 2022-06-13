@@ -24,8 +24,9 @@ def goto(x, y):
 def lines(size, dy, n):
     x = t.xcor()
     y = t.ycor()
+    k = len(colors)
     for i in range(n):    # i меняется от 0 до n-1
-        line(size, colors[i])   # colors[i] - взять цвет номер i из colors
+        line(size, colors[i%k])   # colors[i] - взять цвет номер i из colors
         y -= dy
         goto(x, y)
     
@@ -34,7 +35,8 @@ t.shape("turtle")
 t.width(3)
 t.speed(0)
 
-colors[9]
-lines(100, 20, 7)
+#colors[9]
+colors = ['red', 'yellow', 'green']
+lines(100, 20, 6)
 
 turtle.done()    

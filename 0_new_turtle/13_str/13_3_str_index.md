@@ -16,12 +16,12 @@ lesson = 730288
 
 * `[ ]` - обратиться к элементу строки с номером 
 
-Язык программирования python назван в честь группы [Montey Python](https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D1%82%D0%B8_%D0%9F%D0%B0%D0%B9%D1%82%D0%BE%D0%BD). Покажем новые термины на этой строке.
+Язык программирования python назван в честь группы [Monty Python](https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D1%82%D0%B8_%D0%9F%D0%B0%D0%B9%D1%82%D0%BE%D0%BD). Покажем новые термины на этой строке.
 
 ![](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
-s = 'Montey Python'     
+s = 'Monty Python'     
 print(s[0])				# M
 print(s[1])				# o
 print(s[-1])			# y
@@ -30,7 +30,7 @@ print(s[i])				# n
 						# ...
 print(s[11])			# n
 
-print(s)				# Montey Python
+print(s)				# Monty Python
 n = len(s)				# длина строки
 print(n)				# 12
 ```
@@ -78,10 +78,10 @@ print(len(s))		# 5
 
 ## STRING Какое значение?
 
-![Montey Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
+![Monty Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
-s = 'Montey Python'
+s = 'Monty Python'
 print(s[9])
 ```
 Какое значение (символ) имеет элемент с **номером** 9?
@@ -90,10 +90,10 @@ ANSWER: h
 
 ## QUIZ Какой номер?
 
-![Montey Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
+![Monty Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
-s = 'Montey Python'
+s = 'Monty Python'
 ```
 Какой номер имеет элемент со **значением** `P`?
 
@@ -107,10 +107,10 @@ ANSWER: B
 
 ## STRING Считаем с конца
 
-![Montey Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
+![Monty Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 ```python
-s = 'Montey Python'
+s = 'Monty Python'
 print(s[-4])
 ```
 Какое значение (символ) имеет элемент с **номером** `-4`?
@@ -119,13 +119,13 @@ ANSWER: t
 
 ## STRING Складываем
 
-![Montey Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
+![Monty Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 В питоне один символ - это **строка** длиной 1. Строки можно складывать.
 
 Что напечатает?
 ```python
-s = 'Montey Python'
+s = 'Monty Python'
 print(s[6] + s[1] + s[-1] + s[4])
 ```
 Большие буквы остаются большими. Маленькие буквы остаются маленькими.
@@ -134,14 +134,14 @@ ANSWER: Pony
 
 ## STRING Складываем и умножаем
 
-![Montey Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
+![Monty Python](https://stepik.org/media/attachments/lesson/418189/string_slicing.png)
 
 В питоне один символ - это **строка** длиной 1. Строки можно складывать и умножать.
 
 Что напечатает?
 
 ```python
-s = 'Montey Python'
+s = 'Monty Python'
 print(s[2] + s[-2] * 3) 
 ```
  

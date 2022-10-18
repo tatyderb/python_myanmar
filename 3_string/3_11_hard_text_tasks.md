@@ -6,6 +6,14 @@ lesson = 509847
 
 В файле **mail.txt** дан текст. Напечатайте сколько раз в нем встретилась подстрока (слово или часть слова) `bomb`.
 
+HEADER
+import sys
+text = sys.stdin.read()
+filename = 'mail.txt'
+fd = open(filename, 'w')
+fd.write(text)
+fd.close()
+
 TEST
 a high explosive bomb is one that employs a process called detonation to rapidly release its chemical energy
 the seven islands that came to constitute mumbai were home to communities of fishing colonies
@@ -27,13 +35,20 @@ I have a dog and a cat.
 0
 ====
 
-## SKIP TASKINLINE заменить бомбы на арбузы
+## TASKINLINE заменить бомбы на арбузы
 
 В файле `bomb.txt` дан текст. Замените все подстроки `bomb` на `watermelon`.
 
---Сохраните полученный текст в файл `out.txt`.--
+* В классе оффлайн с учителем: сохраните полученный текст в файл `out.txt`.
+* В stepik результат выведите на `sys.stdout`.
 
-ПОКА: Результат выведите на `sys.stdout`.
+HEADER
+import sys
+text = sys.stdin.read()
+filename = 'bomb.txt'
+fd = open(filename, 'w')
+fd.write(text)
+fd.close()
 
 TEST
 A high explosive bomb is one that employs a process called detonation to rapidly release its chemical energy
@@ -594,6 +609,15 @@ protocol=[ftp]
 host    =[acm.mipt.ru]
 port    =[]
 path    =[/twiki/pub/Cintro/WebHome/C_beginff.pdf]
+params  =[]
+anchor  =[]
+====
+http://stepik.org/
+----
+protocol=[http]
+host    =[stepik.org]
+port    =[]
+path    =[/]
 params  =[]
 anchor  =[]
 ====

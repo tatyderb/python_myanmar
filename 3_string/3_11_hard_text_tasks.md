@@ -10,9 +10,8 @@ HEADER
 import sys
 text = sys.stdin.read()
 filename = 'mail.txt'
-fd = open(filename, 'w')
-fd.write(text)
-fd.close()
+with open(filename, 'w') as fd:
+    fd.write(text)
 
 TEST
 a high explosive bomb is one that employs a process called detonation to rapidly release its chemical energy
@@ -46,9 +45,8 @@ HEADER
 import sys
 text = sys.stdin.read()
 filename = 'bomb.txt'
-fd = open(filename, 'w')
-fd.write(text)
-fd.close()
+with open(filename, 'w') as fd:
+    fd.write(text)
 
 TEST
 A high explosive bomb is one that employs a process called detonation to rapidly release its chemical energy
@@ -229,9 +227,8 @@ HEADER
 import sys
 text = sys.stdin.read()
 filename = 'lesson.txt'
-fd = open(filename, 'w')
-fd.write(text)
-fd.close()
+with open(filename, 'w') as fd:
+    fd.write(text)
 
 TEST
 /3_string/tasks/first_line.py
@@ -306,9 +303,8 @@ HEADER
 import sys
 text = sys.stdin.read()
 filename = 'filelist.txt'
-fd = open(filename, 'w')
-fd.write(text)
-fd.close()
+with open(filename, 'w') as fd:
+    fd.write(text)
 
 TEST
 ./3_string/task_flint.py
@@ -422,9 +418,8 @@ HEADER
 import sys
 text = sys.stdin.read()
 filename = 'filelist.txt'
-fd = open(filename, 'w')
-fd.write(text)
-fd.close()
+with open(filename, 'w') as fd:
+    fd.write(text)
 
 TEST
   36K -rwxrwxrwx 1 tatyderb tatyderb  35K Jun  1  2020  164.doc

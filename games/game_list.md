@@ -31,6 +31,7 @@
 | Rok | руны | фото | нет |  |
 | Set | наборы карт | | нет | нет |
 | | | | | |
+| Велонимо | | | | |
 | Корова 006 | Карты | pnp с редизайном | берем любую | ? |
 | No, thanks! | карты | pnp | оценочная функция? | ? |
 | Sushi go | карты | pnp | придумать | без палочек! |
@@ -41,6 +42,10 @@
 | Mattix | математическая | pnp | maxmin, minmax | |
 | Мяурри | карты | - | случайную | только рыбы с числами |
 | | | | | |
+| Черепашьи бега | поле, карты | pnp | описано | без радужных пока |
+| Гонка улиток | поле, карты | | | |
+| **Селестия** | поле | у меня | | без дополнений |
+| | | | | |
 | Палеонтологист | заполняем поле фигурами | можно без изображений заливкой цветом | надо думать | очки за звездочки и цвета |
 | Роскошь (Splendor) | карты | - | AI (альфа-бета отсечения?) |  |
 | | | | | |
@@ -48,8 +53,6 @@
 | Бонанза | карты обмен | | | |
 | Codenames | | | | только движок |
 | Тени. Амстердам | | | | только движок |
-
-
 
 
 ## 1. Очень простые
@@ -184,6 +187,23 @@ https://boardgamegeek.com/image/640566/rok
 
 Нельзя брать, мы его разбираем на парах.
 
+## Велонимо (похоже на UNO)
+
+Реализуем один заезд.
+
+* https://www.igroved.ru/games/velonimo/ 
+* https://tesera.ru/game/velonimo/
+* https://youtu.be/6bD_LlkBuIg - обзор
+* https://boardgamegeek.com/boardgame/323262/velonimo - из их фото можно нарезать изображения, но для сдачи проекта картинки не нужны, нужны цвета и числа.
+
+* 7 цветов
+* в каждом цвете карты от 1 до 7 (итого 49 карт)
+* черные карты (25, 30, 35, 40, 45, 50) - еще 6 карт
+* майка победителя
+
+[все карты](https://cf.geekdo-images.com/7-fUHBmMHw9d4GYF-sE88g__imagepage/img/KMR0oHR2Eokusq87QMdzrjG2u-s=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6626890.jpg)
+
+
 ## Корова 006 
 
 * https://www.mosigra.ru/6_nimmt/rules/ 
@@ -261,6 +281,31 @@ https://boardgamegeek.com/image/640566/rok
 
 # На игровом поле
 
+## Черепашьи бега 
+
+* https://tesera.ru/game/Ribbit/
+* https://youtu.be/lGw_DY0ItXQ - обзор
+* https://cloud.mail.ru/public/ESvL/st9XVNLec - PnP (космическая тема)
+* https://tesera.ru/game/photo/580524/ - PnP (редизайн)
+
+ИИ:
+* свою вперед,
+* если я НЕ чемпион,
+    * чемпиона назад
+* иначе
+    * сбросить черепаху с себя назад
+* последнюю вперед
+
+## Гонка улиток 
+
+* https://tesera.ru/game/go-slow/
+* https://youtu.be/lGw_DY0ItXQ обзор
+
+
+## Селестия
+
+Без дополнений.
+
 ## Палеонтологист
 
 * https://boardgamer.ru/paleontologi-besplatnaya-igra-s-ruchkoj-i-bumagoj#more-59236
@@ -272,11 +317,6 @@ https://boardgamegeek.com/image/640566/rok
 
 ## Роскошь (splendor)
 
-
-# Игры на логику
-
-
-## Ёта
 
 
 
@@ -296,6 +336,8 @@ https://boardgamegeek.com/image/640566/rok
 * https://printgames.ru/nastolnaya-igra-bonanza/ - карты
 
 
+# Client-Server (один игрок не должен видеть поле другого игрока)
+
 ## Codenames 
 
 Движок и по сети давать слово и показывать карту.
@@ -304,9 +346,6 @@ https://boardgamegeek.com/image/640566/rok
 
 Движок на технологии клиент-сервер.
 
-## Селестия
-
-Без дополнений.
 
 
 

@@ -181,6 +181,19 @@ https://boardgamegeek.com/image/640566/rok
 * https://www.igroved.ru/games/set/
 * https://en.wikipedia.org/wiki/Set_(card_game)
 
+## Код фараона
+
+* https://tesera.ru/game/Pharaoh-Code/
+* https://www.youtube.com/watch?v=vz1tHewyslM
+
+Из трех чисел пытаемся составить выражение с нужным числом. 
+
+## Рамзес II
+
+* https://tesera.ru/game/ramses-ii/
+
+Помесь пятнашек и мемо.
+
 # Карты на подумать
 
 ## UNO
@@ -318,6 +331,9 @@ https://boardgamegeek.com/image/640566/rok
 ## Роскошь (splendor)
 
 
+## Фотолазы
+
+* https://tesera.ru/game/Fotolazi/
 
 
 

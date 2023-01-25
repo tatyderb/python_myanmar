@@ -36,6 +36,7 @@
 | No, thanks! | карты | pnp | оценочная функция? | ? |
 | Sushi go | карты | pnp | придумать | без палочек! |
 | Red7 | Карты | pnp | надо думать | ? |
+| Дюжина короля | Карты | pnp | надо думать | ? |
 | Ётта | карты | pnp | перебор? | без джокера |
 | Артишоки в шоке | карты | | случайную | ревень |
 | Deep sea adventure | жадность | pnp | вероятность повернуть уменьшается | |
@@ -254,6 +255,11 @@ https://boardgamegeek.com/image/640566/rok
 
 Можно делать только движок с проверкой правильности выкладки карт и перехода хода.
 
+## King of 12 (Дюжина короля)
+
+* [Правила игры](https://hobbygames.ru/download/rules/king_of_12_rules.pdf)
+* [pnp](https://boardgamer.ru/forum/index.php?topic=22792.0)
+
 ## Ётта (iotta)
 
 * https://www.igroved.ru/games/iota/
@@ -329,6 +335,8 @@ https://boardgamegeek.com/image/640566/rok
 Можно делать без AI, чисто движок, игрок с игроком, хорошо ляжет на клиент-сервер архитектуру.
 
 ## Роскошь (splendor)
+
+* [Правила игры](https://www.igroved.ru/rules/rules_splendor_rus.pdf)
 
 
 ## Фотолазы

@@ -105,36 +105,202 @@ ANSWER: 35
 
 Найдем минимальные значения в каждой строке, выпишем эти числа в добавочный столбец (константы приведения).
 
-|	| 1	| 2	| 3	| 4	| 5 |  $d_i$ |
-|---|---|---|---|---|---|---|
-| **1**	| M	| 20| 18| 12| 8 | **8**	|
-| **2**	| 5	| M	| 14| 7	| 11| **5**	|
-| **3**	| 12| 18| M	| 6	| 11| **6**	|
-| **4**	| 11| 17| 11| M	| 12| **11**	|
-| **5**	| 5	| 5	| 5	| 5	| M | **5**	|
-
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>20</td>
+			<td>18</td>
+			<td>12</td>
+			<td>8</td>
+			<td style="background-color:#ffa0a0;"><strong>8</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>5</td>
+			<td>M</td>
+			<td>14</td>
+			<td>7</td>
+			<td>11</td>
+			<td style="background-color:#ffa0a0;"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>12</td>
+			<td>18</td>
+			<td>M</td>
+			<td>6</td>
+			<td>11</td>
+			<td style="background-color:#ffa0a0;"><strong>6</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>11</td>
+			<td>17</td>
+			<td>11</td>
+			<td>M</td>
+			<td>12</td>
+			<td style="background-color:#ffa0a0;"><strong>11</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>5</td>
+			<td>5</td>
+			<td>5</td>
+			<td>5</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>5</strong></td>
+		</tr>
+	</tbody>
+</table>
 Вычтем из каждого числа в строке найденное минимальное число. В каждой строке получим минимум один 0.
 
-|	| 1	| 2	| 3	| 4	| 5 |  $d_i$ |
-|---|---|---|---|---|---|---|
-| *1*	| M	| 12| 10| 4 | 0 | **8**	|
-| *2*	| 0	| M	| 9 | 2	| 6 | **5**	|
-| *3*	| 6 | 12| M	| 0	| 5 | **6**	|
-| *4*	| 0 | 6 | 0 | M	| 1 | **11**|
-| *5*	| 0	| 0	| 0	| 0	| M | **5**	|
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><em>1</em></td>
+			<td>M</td>
+			<td>12</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0"><strong>8</strong></td>
+		</tr>
+		<tr>
+			<td><em>2</em></td>
+			<td>0</td>
+			<td>M</td>
+			<td>9</td>
+			<td>2</td>
+			<td>6</td>
+			<td style="background-color:#ffa0a0"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td><em>3</em></td>
+			<td>6</td>
+			<td>12</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0"><strong>6</strong></td>
+		</tr>
+		<tr>
+			<td><em>4</em></td>
+			<td>0</td>
+			<td>6</td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#ffa0a0"><strong>11</strong></td>
+		</tr>
+		<tr>
+			<td><em>5</em></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0"><strong>5</strong></td>
+		</tr>
+	</tbody>
+</table>
 
 #### 1.2 Редукция по столбцам
 
 Из **полученной матрицы после редукции по строкам** проведем редукцию по столбцам и выпишем в добавочную строку минимальные значения по столбцам (константы приведения).
 
-|	| 1	| 2	| 3	| 4	| 5 |  $d_i$ |
-|---|---|---|---|---|---|---|
-| *1*	| M	| 12| 10| 4 | 0 | **8**	|
-| *2*	| 0	| M	| 9 | 2	| 6 | **5**	|
-| *3*	| 6 | 12| M	| 0	| 5 | **6**	|
-| *4*	| 0 | 6 | 0 | M	| 1 | **11** |
-| *5*	| 0	| 0	| 0	| 0	| M | **5**	|
-| $d_j$ | **0** | **0** | **0** | **0** | **0** |  $H$ |
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>12</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>8</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>9</td>
+			<td>2</td>
+			<td>6</td>
+			<td style="background-color:#ffa0a0;"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>12</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0;"><strong>6</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td>6</td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#ffa0a0;"><strong>11</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">$H$</td>
+		</tr>
+	</tbody>
+</table>
 
 Нижняя граница - сумма по константам приведения  $$H = \sum_{i=1}^{n} d_i + \sum_{j=1}^{n} d_j $$
 
@@ -146,13 +312,83 @@ $$H  = (8+5+6+11+5) + (0+0+0+0+0) = 35 $$
 
 |	| 1	| 2	| 3	| 4	| 5 |
 |---|---|---|---|---|---|
-| *1*	| M	| 12| 10| 4 | 0 |
-| *2*	| 0	| M	| 9 | 2	| 6 |
-| *3*	| 6 | 12| M	| 0	| 5 |
-| *4*	| 0 | 6 | 0 | M	| 1 |
-| *5*	| 0	| 0	| 0	| 0	| M |
+| **1**	| M	| 12| 10| 4 | 0 |
+| **2**	| 0	| M	| 9 | 2	| 6 |
+| **3**	| 6 | 12| M	| 0	| 5 |
+| **4**	| 0 | 6 | 0 | M	| 1 |
+| **5**	| 0	| 0	| 0	| 0	| M |
 
 Ищем степени нулей (то есть для нулей второй минимум в каждой строке и столбце и складываем их)
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#42aaff">$b_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>12</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#42aaff"><strong>4</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>9</td>
+			<td>2</td>
+			<td>6</td>
+			<td style="background-color:#42aaff"><strong>2</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>12</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#42aaff"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td>6</td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#42aaff"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#42aaff"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#42aaff">$b_j$</td>
+			<td style="background-color:#42aaff"><strong>0</strong></td>
+			<td style="background-color:#42aaff"><strong>0</strong></td>
+			<td style="background-color:#42aaff"><strong>0</strong></td>
+			<td style="background-color:#42aaff"><strong>0</strong></td>
+			<td style="background-color:#42aaff"><strong>0</strong></td>
+			<td style="background-color:#42aaff">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
 
 То есть для 0 в ячейке (1,5) минимальное число по первой строке $min(12, 10, 4) = 4$, а по пятому столбцу $min(6, 5, 1) = 1$. Степень этого нуля 4+1=5. Запишем степени каждого нуля в скобках перед нулем.
 
@@ -161,7 +397,7 @@ $$H  = (8+5+6+11+5) + (0+0+0+0+0) = 35 $$
 | *1*	| M	| 12| 10| 4 | (5)0 |
 | *2*	| (2)0	| M	| 9 | 2	| 6 |
 | *3*	| 6 | 12| M	| (5)0	| 5 |
-| *4*	| (0)0 | 6 | (0)00 | M	| 1 |
+| *4*	| (0)0 | 6 | (0)0 | M	| 1 |
 | *5*	| (0)0	| **(6)0**	| (0)0	| (0)0	| M |
 
 #### 1.4 Выбираем ребро
@@ -170,16 +406,136 @@ $$H  = (8+5+6+11+5) + (0+0+0+0+0) = 35 $$
 
 #### 1.5 и 1.6 Исключаем ребро (5,2), план Х1
 
-Для этого в (5,2) заменяем 0 на бесконечность М и вычисляем $H$ для полученной матрицы, выполняя приведение по строкам и столбцам еще раз. Обратите внимание, по столбцу 2 выполняется редукция, от всех значений отнимаем 6:
+Для этого в (5,2) заменяем 0 на бесконечность М.
 
-|	| 1	| 2	| 3	| 4	| 5 |  $d_i$ |
-|---|---|---|---|---|---|---|
-| *1*	| M	| 6| 10| 4 | 0 | **0**	|
-| *2*	| 0	| M	| 9 | 2	| 6 | **0**	|
-| *3*	| 6 | 6| M	| 0	| 5 | **0**	|
-| *4*	| 0 | 0 | 0 | M	| 1 | **0** |
-| *5*	| 0	| M	| 0	| 0	| M | **0**	|
-| $d_j$ | **0** | **6** | **0** | **0** | **0** |  6 |
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>6</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>9</td>
+			<td>2</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td style="background-color:#ff1493">M</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+		</tr>
+	</tbody>
+</table>
+
+
+Вычисляем $H$ для полученной матрицы, выполняя приведение по строкам и столбцам еще раз. Обратите внимание, по столбцу 2 выполняется редукция, **от всех значений в столбце отнимаем 6**:
+
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>6</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>9</td>
+			<td>2</td>
+			<td>6</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>6</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">6</td>
+		</tr>
+	</tbody>
+</table>
 
 Новая оценка снизу включает старую оценку 35 и вновь найденную 5.
 
@@ -191,15 +547,119 @@ $$H\overline{(5,2)} = 35 + 6 = 41$$
 
 **Удаляем строку 5, столбец 2** - включаем ребро (5,2) в решение и редуцируем матрицу по строкам и столбцам.
 
-Кроме того, чтобы по этому ребру не пришли из 2 в 5, ставим цену (2,5) очень большой, пишем в таблицу М.
+Кроме того, чтобы по этому ребру не пришли из 2 в 5, ставим цену (2,5) очень большой, пишем в таблицу М вместо 6.
 
-|	    | 1	| 3	| 4	| 5 |  $d_i$ |
-|-------|---|---|---|---|---|
-| *1*	| M	| 10| 4 | 0 | **0**	|
-| *2*	| 0	| 9 | 2	| M | **0**	|
-| *3*	| 6 | M	| 0	| 5 | **0**	|
-| *4*	| 0 | 0 | M	| 1 | **0** |
-| $d_j$ | **0** | **0** | **0** |  **0** |  0 |
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td style="background-color:#42aaff">6</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td style="background-color:#42aaff">M</td>
+			<td>9</td>
+			<td>2</td>
+			<td style="background-color:#ffff00">6</td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td style="background-color:#42aaff">6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td style="background-color:#42aaff">0</td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td style="background-color:#42aaff"><strong>5</strong></td>
+			<td style="background-color:#42aaff">0</td>
+			<td style="background-color:#42aaff">0</td>
+			<td style="background-color:#42aaff">0</td>
+			<td style="background-color:#42aaff">0</td>
+			<td style="background-color:#42aaff">M</td>
+		</tr>
+	</tbody>
+</table>
+
+Выполняем редукцию по строкам и столбцам, вычисляем на сколько изменится оценка снизу.
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th  style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>9</td>
+			<td>2</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">0</td>
+		</tr>
+	</tbody>
+</table>
 
 Новая оценка снизу включает старую оценку 35 и вновь найденную 0.
 
@@ -229,10 +689,10 @@ $$H\overline{(5,2)} = 35 + 0 = 35 < 41$$
 
 |	    | 1	| 3	| 4	| 5 |
 |-------|---|---|---|---|
-| *1*	| M	| 10| 4 | (5)0 |
-| *2*	| (2)0	| 9 | 2	| M |
-| *3*	| 6 | M	| (7)0	| 5 |
-| *4*	| (0)0 | (9)0 | M	| 1 |
+| **1**	| M	| 10| 4 | (5)0 |
+| **2**	| (2)0	| 9 | 2	| M |
+| **3**	| 6 | M	| (7)0	| 5 |
+| **4**	| (0)0 | **(9)0** | M	| 1 |
 
 #### 2.4 Выбираем ребро
 
@@ -246,15 +706,62 @@ $$H\overline{(5,2)} = 35 + 0 = 35 < 41$$
 
 Редуцируем матрицу и вычисляем значение H для плана Х3.
 
-|	    | 1	| 3	| 4	| 5 |  $d_i$ |
-|-------|---|---|---|---|---|
-| *1*	| M	| 10| 4 | 0 | **0**	|
-| *2*	| 0	| 9 | 2	| M | **0**	|
-| *3*	| 6 | M	| 0	| 5 | **0**	|
-| *4*	| 0 | **M** | M	| 1 | **0** |
-| $d_j$ | **0** | **9** | **0** |  **0** |  9 |
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>9</td>
+			<td>2</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td style="background-color:#ff1493"><strong>M</strong></td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>9</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">9</td>
+		</tr>
+	</tbody>
+</table>
 
-Нижняя граница гамильтоновых циклов плана Х3 будет $H\overline{(4,3) = 35 + 9 = 44$
+Нижняя граница гамильтоновых циклов плана Х3 будет $H\overline{(4,3)} = 35 + 9 = 44$
 
 #### 2.6 Включаем ребро (4,3), план Х4
 
@@ -262,14 +769,79 @@ $$H\overline{(5,2)} = 35 + 0 = 35 < 41$$
 
 Цена ребра (3,4) ставим очень большой, М.
 
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>4</th>
+			<th>5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>4</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>2</td>
+			<td>M</td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td  style="background-color:#ffff00"><strong>M</strong></td>
+			<td>5</td>
+		</tr>
+	</tbody>
+</table>
 Редуцируем матрицу и вычисляем значение H для плана Х4.
 
-|	    | 1	|  4	| 5 |  $d_i$ |
-|-------|---|----|---|---|
-| *1*	| M	|  4 | 0 | **0**	|
-| *2*	| 0	|  2 | M | **0**	|
-| *3*	| 6 |  **M** | 5 | **5**	|
-| $d_j$ | **0** |  **2** |  **0** |  7 |
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>2</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td><strong>M</strong></td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0;"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>2</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">7</td>
+		</tr>
+	</tbody>
+</table>
 
 Нижняя граница гамильтоновых циклов плана Х3 будет $H = 35 + 7 = 42$
 
@@ -293,16 +865,89 @@ $$H\overline{(5,2)} = 35 + 0 = 35 < 41$$
 
 ### 3. Итерация 3, план Х1
 
-Берем матрицу плана Х1 и ищем у нее степени нулей, чтобы выбрать ребро.
+Берем редуцированную матрицу плана Х1, Н = 41, не включаем ребро (5,2).
 
-|	| 1	| 2	| 3	| 4	| 5 |  $b_i$ |
-|---|---|---|---|---|---|----|
-| *1*	| M	| 6| 10| 4 | (5)0 | **4**	
-| *2*	| (2)0	| M	| 9 | 2	| 6 | **2**	
-| *3*	| 6 | 6| M	| (5)0	| 5 | **5**	
-| *4*	| (0)0 | (6)0 | (0)0 | M	| 1 | **0**	
-| *5*	| (0)0	| M	| (0)0	| (0)0	| M | **0**	
-| $b_j$ | **0** | **6** | **0** | **0** | **1** |  |
+|	| 1	| 2	| 3	| 4	| 5 | 
+|---|---|---|---|---|---| 
+| **1**	| M	| 6 | 10| 4 | 0 |
+| **2**	| 0	| M	| 9 | 2	| 6 |
+| **3**	| 6 | 6| M	| 0	| 5 |
+| **4**	| 0 | 0 | 0 | M	| 1 |
+| **5**	| 0	| M	| 0	| 0	| M |
+
+
+Ищем у нее степени нулей, чтобы выбрать ребро.
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#00bfff">$b_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>6</td>
+			<td>10</td>
+			<td>4</td>
+			<td>(5)0</td>
+			<td style="background-color:#00bfff"><strong>4</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>(2)0</td>
+			<td>M</td>
+			<td>9</td>
+			<td>2</td>
+			<td>6</td>
+			<td style="background-color:#00bfff"><strong>2</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>6</td>
+			<td>M</td>
+			<td>(5)0</td>
+			<td>5</td>
+			<td style="background-color:#00bfff"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>(0)0</td>
+			<td>(6)0</td>
+			<td>(0)0</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#00bfff"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>(0)0</td>
+			<td>M</td>
+			<td>(0)0</td>
+			<td>(0)0</td>
+			<td>M</td>
+			<td style="background-color:#00bfff"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#00bfff">$b_j$</td>
+			<td style="background-color:#00bfff"><strong>0</strong></td>
+			<td style="background-color:#00bfff"><strong>6</strong></td>
+			<td style="background-color:#00bfff"><strong>0</strong></td>
+			<td style="background-color:#00bfff"><strong>0</strong></td>
+			<td style="background-color:#00bfff"><strong>1</strong></td>
+			<td style="background-color:#00bfff">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
 
 #### 3.4 Выбираем ребро
 
@@ -316,14 +961,75 @@ $$H\overline{(5,2)} = 35 + 0 = 35 < 41$$
 
 Редуцируем матрицу.
 
-|	| 1	| 2	| 3	| 4	| 5 |  $d_i$ |
-|---|---|---|---|---|---|---|
-| *1*	| M	| 6| 10| 4 | 0 | **4**	|
-| *2*	| 0	| M	| 9 | 2	| 6 | **2**	|
-| *3*	| 6 | 6| M	| 0	| 5 | **0**	|
-| *4*	| 0 | **M** | 0 | M	| 1 | **0** |
-| *5*	| 0	| M	| 0	| 0	| M | **0**	|
-| $d_j$ | **0** | **6** | **0** | **0** | **0** |  6 |
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>6</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>9</td>
+			<td>2</td>
+			<td>6</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>4</strong></td>
+			<td>0</td>
+			<td style="background-color:#ff1493"><strong>M</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>6</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">6</td>
+		</tr>
+	</tbody>
+</table>
 
 Нижняя оценка была 41, увеличилась на 6.  $H\overline{(4,2)} = 41 + 6 = 47$
 
@@ -331,13 +1037,60 @@ $$H\overline{(5,2)} = 35 + 0 = 35 < 41$$
 
 Удаляем строку 4, столбец 2, на месте (2,4) ставим большое число М.
 
-|	| 1	|3	| 4	| 5 |  $d_i$ |
-|---|---|---|---|---|---|---|
-| *1*	| M	| 10| 4 | 0 | **0**	|
-| *2*	| 0	| M | 2	| 6 | **0**	|
-| *3*	| 6 | 9	| M	| 5 | **0**	|
-| *5*	| 0	| 0	| 0	| M | **0**	|
-| $d_j$ | **0** | **0** | **0** | **0** |  0 |
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>10</td>
+			<td>4</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>9</td>
+			<td  style="background-color:#ffff00"><strong>M</strong></td>
+			<td>6</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">0</td>
+		</tr>
+	</tbody>
+</table>
 
 Нижняя оценка была 41, увеличилась на 0.  $H(4,2) = 41 + 0 = 41$
 
@@ -348,23 +1101,463 @@ $$H\overline{(5,2)} = 35 + 0 = 35 < 41$$
 Добавляем $(4,2)$ в список отброшенных решений
 
 * Выбрано решение `{X6, 41, (4,2)}`
-* Список оборванных ветвей: `{X3, 44, без(4,3)}`, `{X4, 42, (4,3)}`, '{X5, 47, без(4,2)}`
+* Список оборванных ветвей: `{X3, 44, без(4,3)}`, `{X4, 42, (4,3)}`, `{X5, 47, без(4,2)}`
 
 #### 3.8 Сравнение со списком оборванных ветвей
 
 Оценка снизу выбранного решения 41 лучше, чем оценки снизу оборванных решений, значит оставляем выбранное решение и продолжаем работать с ним.
 
+
 ### 4. Итерация 4, план Х6
 
-Берем матрицу плана Х6 и ищем у нее степени нулей.
+Берем матрицу плана `{X6, 41, (4,2)}`
 
-|	| 1	|3	| 4	| 5 |  $b_i$ |
-|---|---|---|---|---|---|---|
-| *1*	| M	| 10| 4 | 0 | **4**	|
-| *2*	| 0	| 9 | 2	| 6 | **2**	|
-| *3*	| 6 | M	| 0	| 5 | **5**	|
-| *5*	| 0	| 0	| 0	| M | **0**	|
-| $b_j$ | **0** | **10** | **0** | **0** |  0 |
+|	    | 1	| 3	| 4	| 5 |
+|-------|---|---|---|---|
+| **1**	| M	| 10| 4 | 0 |
+| **2**	| 0	| 9 | M	| 6 |
+| **3**	| 6 | M	| 0	| 5 |
+| **5**	| 0	| 0	| 0	| M |
 
 
-#### 4. 
+Ищем у нее степени нулей.
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th style="background-color:#00bfff;">$b_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>10</td>
+			<td>4</td>
+			<td>(9)0</td>
+			<td style="background-color:#00bfff;"><strong>4</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>(6)0</td>
+			<td>9</td>
+			<td>M</td>
+			<td>6</td>
+			<td style="background-color:#00bfff;"><strong>6</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>(5)0</td>
+			<td>5</td>
+			<td style="background-color:#00bfff;"><strong>5</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>(0)0</td>
+			<td>(9)0</td>
+			<td>(0)0</td>
+			<td>M</td>
+			<td style="background-color:#00bfff;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#00bfff;">$b_j$</td>
+			<td style="background-color:#00bfff;"><strong>0</strong></td>
+			<td style="background-color:#00bfff;"><strong>9</strong></td>
+			<td style="background-color:#00bfff;"><strong>0</strong></td>
+			<td style="background-color:#00bfff;"><strong>5</strong></td>
+			<td style="background-color:#00bfff;"> </td>
+		</tr>
+	</tbody>
+</table>
+
+Наибольшая степень `(9)0` у ребер (1,5) и (5,3). Берем любое, например (1,5). Можете провести расчет для ребра (5,3) самостоятельно и убедиться, что найденный маршрут будет таким же. 
+
+#### 4.5 и 4.6 Исключаем ребро (1,5), план Х7
+
+На место (1,5) пишем М. 
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>10</td>
+			<td>4</td>
+			<td style="background-color:#ff1493"><strong>M</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>9</td>
+			<td>M</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+		</tr>
+	</tbody>
+</table>
+
+Редуцируем матрицу
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th  style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>1</strong></td>
+			<td>M</td>
+			<td>6</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>4</strong></td>
+		</tr>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>9</td>
+			<td>M</td>
+			<td>1</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>5</strong></td>
+			<td style="background-color:#ffa0a0;">9</td>
+		</tr>
+	</tbody>
+</table>
+
+Н = 41 + 9 = 50
+
+
+#### 4.5 и 4.6 Включаем ребро (1,5), план Х8
+
+Включаем ребро (1,5), вычеркивая 1 строку и 5 столбец. Если включаем (1,5), то обратный путь (5,1) выключаем и ставим там М.
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>2</strong></td>
+			<td>0</td>
+			<td>9</td>
+			<td >M</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td  style="background-color:#ffff00">M</td>
+			<td>0</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">0</td>
+		</tr>
+	</tbody>
+</table>
+
+$Н(1,5)$ = 41 + 0 = 41.
+
+#### 4.7 Сравниваем оценки снизу
+
+Так как $H(1,5) = 41 < 50 = H\overline{(1,5)}$, то выбираем решение с ребром (4,2) и отбрасываем решение  без ребра $\overline{(1,5)}$ .
+
+Добавляем $\overline{(1,5)}$ в список оборванных ветвей
+
+* Выбрана ветвь `{X8, 41, (1,5)}`
+* Список оборванных ветвей: `{X3, 44, без(4,3)}`, `{X4, 42, (4,3)}`, `{X5, 47, без(4,2)}`, `{X7, 50, без(1,5)}`
+
+### 5. Итерация 5, план Х8
+
+Берем матрицу плана `{X8, 41, (1,5)}`
+
+|	    | 1	|3	| 4	|
+|-------|---|---|---|
+| **2**	| 0	| 9 | M	|
+| **3**	| 6 | M	| 0	|
+| **5**	| M	| 0	| 0	|
+
+Находим степени нулей (вторые минимумы)
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th  style="background-color:#00bfff">$b_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>2</strong></td>
+			<td><strong>(15)0</strong></td>
+			<td>9</td>
+			<td>M</td>
+			<td style="background-color:#00bfff"><strong>9</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>(6)0</td>
+			<td style="background-color:#00bfff"><strong>6</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>M</td>
+			<td>(9)0</td>
+			<td>(0)0</td>
+			<td style="background-color:#00bfff"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#00bfff">$b_j$</td>
+			<td style="background-color:#00bfff"><strong>6</strong></td>
+			<td style="background-color:#00bfff"><strong>9</strong></td>
+			<td style="background-color:#00bfff"><strong>0</strong></td>
+			<td style="background-color:#00bfff"> </td>
+		</tr>
+	</tbody>
+</table>
+
+Ребро ветвления (2,1) с `(15)0`.
+
+#### 5.5 и 5.6 Исключаем ребро (2,1), план Х9
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>2</strong></td>
+			<td  style="background-color:#ff1493"><strong>M</strong></td>
+			<td>9</td>
+			<td>M</td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>6</td>
+			<td>M</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>M</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+	</tbody>
+</table>
+
+Редуцируем матрицу
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>1</th>
+			<th>3</th>
+			<th>4</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>2</strong></td>
+			<td><strong>M</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td style="background-color:#ffa0a0;"><strong>9</strong></td>
+		</tr>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>0</td>
+			<td>M</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>M</td>
+			<td>0</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>6</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">15</td>
+		</tr>
+	</tbody>
+</table>
+
+$H\overline{(2,1)} = 41 + 15 = 56$
+
+#### 5.5 и 5.6 Включаем ребро (2,1), план Х10
+
+Включаем ребро (2,1), вычеркивая 2 строку и 1 столбец. Если включаем (2,1), то обратный путь (1,2) выключаем и ставим там М, но этой строки у нас и так нет.
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>3</th>
+			<th>4</th>
+			<th style="background-color:#ffa0a0;">$d_i$</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>3</strong></td>
+			<td>M</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td><strong>5</strong></td>
+			<td>0</td>
+			<td>0</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffa0a0;">$d_j$</td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;"><strong>0</strong></td>
+			<td style="background-color:#ffa0a0;">0</td>
+		</tr>
+	</tbody>
+</table>
+
+$H(2,1) = 41 + 0 = 41$
+
+#### 5.7 Сравниваем оценки снизу
+
+Так как $H(2,1) = 41 < 56 = H\overline{(2,1)}$, то выбираем решение с ребром (2,1) и отбрасываем решение  без ребра $\overline{(2,1)}$ .
+
+Добавляем $\overline{(2,1)}$ в список оборванных ветвей
+
+* Выбрано решение `{X10, 41, (2,1)}`
+* Список оборванных ветвей: `{X3, 44, без(4,3)}`, `{X4, 42, (4,3)}`, `{X5, 47, без(4,2)}`, `{X7, 50, без(1,5)}`, `{X9, 56, без(2,1)}`
+
+#### 5.8 Получена матрица 2х2
+
+В полученной матрице 2х2 
+
+|	    |  3	| 4	|
+|-------|-------|---|
+| **3**	|  M	| 0	|
+| **5**	|  0	| 0	|
+
+единственный путь может быть с ребрами (3,4) и (5,3)
+
+Приведение матрицы показывает, что оценка нижней границы не изменяется H = 41 + 0 = 41.
+
+Из полученных по дереву ветвлений выборов ребер $\overline{(5,2)}$, (4,2), (1,5), (2,1), (3,4), (5,3) получаем набор ребер, которые образуют гамильтонов цикл (4,2), (2,1), (1,5), (5,3), (3,4). 
+
+Длина маршрута равна F = 41
+
+#### 5.9 Сравнение длины гамильтонова контура с оборванными ветвями
+
+Длина маршрута F = 41 меньше, чем нижние оценки в списке оборванных ветвей.
+
+Значит найденное решение оптимальное.
+
+Из точки 1 маршрут будет проходить через ребра (1,5), (5,3), (3,4), (4,2), (2, 1).
+
+Последовательность точек маршрута: 1, 5, 3, 4, 2, 1.  
+
+### Дерево решений
+
+![tsr_tree.svg](https://stepik.org/media/attachments/lesson/900564/tsr_tree.svg)
+
+## Оптимизация алгоритма
+
+Чтобы хранить меньше отброшенных ветвей, сразу напрашивается оптимизация.
+
+Вычислим длину хотя бы одного решения (первое приближение) и будем хранить в списке отброшенных ветвей только те, которые не хуже вот этого решения. Если у нас полностью связанный граф, то можете взять хоть маршрут 1,2,3,4,5,1.
+
+В случае матрицы из примера, вычисление длины этого пути не дало бы никакого выигрыша, длина 57 не позволила бы уменьшить размер списка отброшенных ветвей.

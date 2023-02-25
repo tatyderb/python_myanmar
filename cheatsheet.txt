@@ -65,7 +65,7 @@ map(lambda x: x+1, range(10))
 # 6 7 8 9
 filter(lambda x: x > 5, range(10))
 # 45 = 0 + 1 + ... + 9 functools
-reduce(lambda out, x: out + x, range(10))
+reduce(lambda out, x: out + x, range(10), 0)
 
 all([1, 7, 0, 5])   # False  
 any([1, 7, 0, 5])   # True 
@@ -76,4 +76,44 @@ a, *b, c = line.split()
 
 string.digits
 string.ascii_letters
-     
+
+open("test.txt", mode="r", encoding="utf-8")
+
+#------------------------ datetime
+# работа с локалью
+
+from datetime import date  (неизменяемое)
+date(year, month, day)
+date2 = date1.replace(year=1995)
+date.today()
+date.weekday()    # 0 - понедельник, 6 - воскресенье
+date.isoweekday() # 1 - понедельник, 7 - воскресенье
+date.fromordinal(n), toordinal() - количество дней с 0001-01-01
+d.strftime() 
+d.isoformat() или str(d) 2021-12-31
+date.fromisoformat()    # 3.7+
+
+from datetime import time  (неизменяемое)
+time(hour, minute, second, microsecond)
+t.replace(hour=10)
+time.now()
+t.isoformat() или str(t) 21:15:17
+time.fromisoformat()    # 3.7+
+
+
+from datetime import datetime  (неизменяемое)
+import locale
+
+locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
+
+my_datetime = datetime(2021, 8, 10, 12, 34, 15)
+
+print(my_datetime.strftime('%A %d, %B %Y, %H:%M:%S'))
+# вторник 10, Август 2021, 12:34:15    
+
+
+from datetime import timedelta
+delta = timedelta(days=50, seconds=27, microseconds=10, milliseconds=29000, minutes=5, hours=8, weeks=2)
+# есть только атрибуты days, seconds, microseconds
+delta.total_seconds()  # выразим все в секундах
+dt1+dt2, dt1-dt2, dt1*n, dt1/n, dt1/dt2

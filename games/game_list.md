@@ -36,6 +36,7 @@
 | No, thanks! | карты | pnp | оценочная функция? | ? |
 | Sushi go | карты | pnp | придумать | без палочек! |
 | Red7 | Карты | pnp | надо думать | ? |
+| Sea, Salt & Paper | Карты | из правил или bga | надо думать | ? |
 | Дюжина короля | Карты | pnp | надо думать | ? |
 | Ётта | карты | pnp | перебор? | без джокера |
 | Артишоки в шоке | карты | | случайную | ревень |
@@ -260,6 +261,12 @@ https://boardgamegeek.com/image/640566/rok
 
 * [Правила игры](https://hobbygames.ru/download/rules/king_of_12_rules.pdf)
 * [pnp](https://boardgamer.ru/forum/index.php?topic=22792.0)
+
+## Sea, Salt & Paper
+
+* https://youtu.be/8h7T9tNzNGg
+* https://boardgamegeek.com/boardgame/367220/sea-salt-paper
+* https://boardgamearena.com/gamepanel?game=seasaltpaper
 
 ## Ётта (iotta)
 

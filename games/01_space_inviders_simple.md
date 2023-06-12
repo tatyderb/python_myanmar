@@ -15,6 +15,8 @@ lang = python
 
 ### План, если вы проводите live coding.
 
+[Пошаговый план](https://stepik.org/media/attachments/lesson/784099/%D0%BF%D0%BE%D1%88%D0%B0%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BF%D0%BB%D0%B0%D0%BD_livecode_space_invaders.md) - распечатать и использовать во время показа.
+
 1. Подготовка.
 2. Черное окно
    * import pygame
@@ -53,6 +55,8 @@ lang = python
 6. Проверка, что модуль нормально установился
     1. Добавили `print(pg.version.ver)`, потом эту строку можно закоментировать
     
+![Установка pygame в PyCharm](https://stepik.org/media/attachments/lesson/784099/install_pygame1.png)    
+    
 Надо выставить корректные EOL настройки
 https://www.jetbrains.com/help/pycharm/configuring-line-endings-and-line-separators.html
 В статус баре меняем внизу окна pycharm для текущего файла.
@@ -64,10 +68,17 @@ https://www.jetbrains.com/help/pycharm/configuring-line-endings-and-line-separat
 ```python
 import pygame
 
-pg.init()
+pygame.init()
 ```
 
 Запускаем, не должно ничего происходить. Код должен запускаться без ошибок.
+
+Можно import сделать так:
+```python
+import pygame as pg
+
+pg.init()
+```
 
 ### Черное окно, которое не умеет закрываться
 
@@ -102,6 +113,13 @@ while running:
 У события есть поля тип `event.type` и ключ `event.key`. Нажатие на `Х` порождает событие типа `pygame.QUIT`.
 
 Проверяем, что после запуска можно нажать на `Х` и приложение закроется без ошибок.
+
+### Не так часто
+
+Если у вас CPU load около 100%, то будем обрабатывать события не непрерывно, а установим FPS (frame per second, частота кадров). В играх обычно ставят 60 кадров в секунду, в кино показывают 24 кадра в секунду. Добавим паузу, когда программа отдыхает до следующего кадра, а не пытается непрерывно опрашивать события.
+
+
+
 
 ### Декорации окна - заголовок и иконка
 

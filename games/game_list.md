@@ -17,6 +17,7 @@
 | Hoppladi Hopplada | кубики, вероятность | сами | вероятности | AI |
 | | | | | |
 | Жадюги | про жадность | сами | вероятности | легко по сети |
+| Hit! | про жадность | сами | вероятности | легко по сети |
 | QE | аукцион | сами | чуть подумать | по сети |
 | | | | | |
 | bRainbow | карточная на время | не надо | не надо | Соло, учебный режим, дуэль |
@@ -36,11 +37,16 @@
 | Корова 006 | Карты | pnp с редизайном | берем любую | ? |
 | No, thanks! | карты | pnp | оценочная функция? | ? |
 | Sushi go | карты | pnp | придумать | без палочек! |
+| Tucano | карты | bga | придумать | без туканов |
+| Салат удачи | карты | скриншот | придумать | ? |
 | Red7 | Карты | pnp | надо думать | ? |
 | Sea, Salt & Paper | Карты | из правил или bga | надо думать | ? |
+| Tang Hu Lu | фрукты на шпажки | из правил или bga | надо думать | ? |
+| Line it! | Карты числа и цвета | из правил или bga | без ставок | |
 | Дюжина короля | Карты | pnp | надо думать | ? |
 | Ётта | карты | pnp | перебор? | без джокера |
 | Артишоки в шоке | карты | | случайную | ревень |
+| Котокафе | рисуем на поле |  | случайную |  |
 | Deep sea adventure | жадность | pnp | вероятность повернуть уменьшается | |
 | Mattix | математическая | pnp | maxmin, minmax | |
 | Мяурри | карты | - | случайную | только рыбы с числами |
@@ -97,6 +103,12 @@
 * green 1
 
 19 камней в каждом мешке.
+
+## Hit!
+
+* https://boardgamegeek.com/boardgame/278903/hit
+* https://www.youtube.com/watch?v=DJHseM-TLs4 
+* https://gaga.ru/game/hit/?partner=302
 
 ## QE
 
@@ -252,6 +264,17 @@ https://boardgamegeek.com/image/640566/rok
 
 Без палочек! Можно сначала без васаби.
 
+## Tucano
+
+* https://dzen.ru/a/ZBtPc1U3gDVVOFZX?share_to=link - правила на русском
+* https://boardgamegeek.com/boardgame/318556/tucano - bgg
+* https://boardgamearena.com/tutorial?game=tucano&tutorial=769 - пошаговый тьюториал на русском на bga
+
+## Салат удачи
+
+* https://tesera.ru/game/point-salad/
+* https://boardgamegeek.com/boardgame/274960/point-salad
+
 ## Red7 (подумать над стратегией)
 
 Нужно продумать AI, например, просчет на 2 хода вперед. (???)
@@ -275,6 +298,26 @@ https://boardgamegeek.com/image/640566/rok
 * https://boardgamegeek.com/boardgame/367220/sea-salt-paper
 * https://boardgamearena.com/gamepanel?game=seasaltpaper
 
+## Tang Hu Lu
+
+* https://boardgamearena.com/gamepanel?game=tanghulu
+
+Набираем фрукты на шпажки, пошаговая.
+
+## Line it!
+
+* https://boardgamearena.com/gamepanel?game=lineit
+
+На рынке в начале хода N*2 карт, где N - количество игроков.
+В ход можно в любом порядке:
+    * сыграть карту из рынка в руку,
+    * сыграть карту из руки в линию,
+    * закончить линию (если в линии будет 3+ карт одного цвета, то мы берем очки из джекпота этого цвета).
+Не больше 2 карт в руке.
+Карта ставки "+5" - если поставим 5 карт после нее в линии, получим +5 очков, иначе потеряем 5 очков при подсчете в конце игры.
+При закрытии линии 3 карты из нее удаляются, остальные карты становятся победными очками. Карты ставок тоже считаются картой.
+Последний ход: колода идет в джекпоты, рынок пустой, игроки играют одну карту с руки и закрывают (обязательно!) линию.
+
 ## Ётта (iotta)
 
 * https://www.igroved.ru/games/iota/
@@ -286,6 +329,13 @@ https://boardgamegeek.com/image/640566/rok
 * https://tesera.ru/game/abandon-all-artichokes/
 * https://www.youtube.com/watch?v=AzW3dBzYuk8
 * https://vk.com/wall-192336173_6188 - обзор
+
+## Котокафе
+
+* https://www.youtube.com/watch?v=lwwrJJoslow - обзор правил
+* https://gaga.ru/game/kotokafe/ - локализация
+* https://boardgamegeek.com/boardgame/279135/cat-cafe
+* https://boardgamearena.com/gamepanel?game=catcafe - попробовать поиграть в уже сделанную
 
 ## Deep sea adventure (Предельное погружение)
 

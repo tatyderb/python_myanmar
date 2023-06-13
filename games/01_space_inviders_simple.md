@@ -13,6 +13,8 @@ lang = python
 
 Подробную информацию о pygame на русском языке можно найти в курсе [Pygame. Введение в разработку игр на Python](https://younglinux.info/pygame/). В нашем курсе игры не цель, а средство изучения языка. Поэтому мы не будем углубляться в работу функций и методов, а кратко описывать только нужную нам функциональность.
 
+Если вас заинтересовал такой подход, рекомендуем так же курс [Программирование аркадных игр и обучение информатике](http://programarcadegames.com/)
+
 ### План, если вы проводите live coding.
 
 [Пошаговый план](https://stepik.org/media/attachments/lesson/784099/%D0%BF%D0%BE%D1%88%D0%B0%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BF%D0%BB%D0%B0%D0%BD_livecode_space_invaders.md) - распечатать и использовать во время показа.
@@ -635,3 +637,95 @@ def model_update():
 enemy_dx = 0
 enemy_dy = 0.1
 ```
+Будем проверять, есть ли пересечение прямоугольников врага и пули с помощью функции `pygame.Rect.colliderect`:
+```python
+def check_collision():
+    global bullet_alive, enemy_alive
+    bullet_rect = pg.Rect(bullet_x, bullet_y, bullet_width, bullet_height)
+    enemy_rect = pg.Rect(enemy_x, enemy_y, enemy_width, enemy_height)
+    if bullet_rect.colliderect(enemy_rect):
+        bullet_alive = False
+        enemy_alive = False
+        # TODO: считать количество сбитых enemy
+```
+
+## Надписи
+
+Дальше хочется начать считать количество сбитых противников и писать Game Over. Для этого нужно или загрузить свой шрифт, или воспользоваться системным шрифтом.
+
+Один раз до цикла загружаем новый шрифт из файла `src/04B_19.TTF` и создаем фонт указанного размера. Размер фонта задается в поинтах вторым аргументом.
+
+```python
+font = pg.font.Font('src/04B_19.TTF', 32)
+hihg_score_font = pg.font.Font('src/04B_19.TTF', 64)
+```
+Можно использовать системный шрифт:
+```python
+restart_font = pg.font.SysFont('None', 48)
+```
+Добавляем отрисовку надписей:
+```python
+def display_redraw():
+    # display.fill('dark blue', (0, 0, display_width, display_height))
+    display.blit(background_img, (0, 0))
+    display.blit(player_img, (player_x, player_y))
+    if bullet_alive:
+        display.blit(bullet_img, (bullet_x, bullet_y))
+    if enemy_alive:
+        display.blit(enemy_img, (enemy_x, enemy_y))
+
+    # надпись
+    score_surface = font.render(f'Score: 123', True, 'red')
+    display.blit(score_surface, (10, 10))
+
+    other_surface = restart_font.render('Game Over', True, (255, 255, 255))
+    w = other_surface.get_width()
+    display.blit(other_surface, ((display_width - w)/2, display_height/2))
+
+    pg.display.update()
+```
+
+## Звуки
+
+Аудиоэффекты в pygame - это одиночные звуки и проигрываемая музыка. Добавим звук из файла `src/laser.wav` на создание пули и в фоне бесконечно будем играть музыку из `src/background.wav`.
+
+Добавим музыку:
+```python
+pg.mixer.music.load('src/background.wav')
+pg.mixer.music.set_volume(0.3)  # громкость
+pg.mixer.music.play(-1)         # -1 - повторяем бесконечно
+```
+
+Звук выстрела надо один раз загрузить до цикла:
+```python
+sound_bullet = pg.mixer.Sound('src/laser.wav')
+sound_bullet.set_volume(0.5)
+```
+Потом в цикле использовать каждый раз, когда создаем пулю:
+```python
+def bullet_create():
+    # создаем пулю ....
+    sound_bullet.play()
+```
+
+## Задания для самостоятельной работы
+
+1. Выпускать пулю так же по нажатию клавиши ПРОБЕЛ.
+2. изменить код, разбить функцию event_process на функции 
+    event_player_process, event_bullet_process
+3. Если противник прошел за игрока, game over.
+4. Пишем количество сбитых противников (счет).
+5. У игрока 3 жизни, теряем жизнь когда противник вышел за игрока вниз, вбок - не считается. Рисуем жизни на экране.
+    * простая модификация - только пишем количество пропущенных врагов.
+6. Оружие - лазер, стреляем мгновенным прямым лучом вверх, 
+    * держится, пока нажата кнопка (клавиатура, правая мыши),
+    * или существует указанное количество секунд,
+    * рисуем красиво с "градиентами".
+    * перезарядка (downtime), пока не прошло, не можем использовать следующий.
+        * показывать на экране полоску, сколько осталось до зарядки лазера.
+7. Оружие - "силовое поле". Полукругом вверх. Модификации аналогичны лазеру.
+8. Время отдыха - после уничтожения противника он Х тиков не появляется.
+
+### Требуются примеры кода
+
+* Что-то что считает сколько тиков будет длиться то или иное событие (лазер существует Х тиков, заряжается N тиков и тп). Привести пример надписи, которая меняет цвет раз в 1 секунду.

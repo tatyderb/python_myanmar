@@ -114,14 +114,19 @@ ANSWER: A
 
 Определите пустой класс `Gun`.
 
+Для проверки вашего решения используется код:
+```python
+g = Gun()
+print(type(g))
+```
+
 CONFIG
 score: 3
 FOOTER
-import sys
-exec(sys.stdin.read())
-TEST
 g = Gun()
 print(type(g))
+TEST
+Входных данных нет
 ----
 <class '__main__.Gun'>
 ====
@@ -130,15 +135,22 @@ print(type(g))
 
 Определите пустой класс `Gun`. Создайте два объекта этого класса, на них ссылаются переменные `tt` и `revolver`
 
-CONFIG
-score: 3
-FOOTER
-import sys
-exec(sys.stdin.read())
-TEST
+Для проверки вашего решения используется код:
+```python
 tt.bullets = 8
 revolver.bullets = 6
 print(tt.bullets, revolver.bullets)
+```
+
+CONFIG
+score: 3
+FOOTER
+tt.bullets = 8
+revolver.bullets = 6
+print(tt.bullets, revolver.bullets)
+
+TEST
+Входных данных нет
 ----
 8 6
 ====

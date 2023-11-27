@@ -4,13 +4,21 @@ lesson = 1140056
 
 ## python как калькулятор
 
+### Содержание
+
+1. Интерактивная консоль
+2. Арифметические операции
+3. Приоритет операций
+
+### Интерактивная консоль
+
 Если у вас установлен python, у вас под рукой есть мощный калькулятор с математическими функциями.
 
 Удобный ввод, копирование, сохранение промежуточных результатов в памяти и последующее их использование, история команд.
 
-Если вы установили питон у себя на компьютере, запустите его и перейдите в **консоль** питона. Подробнее это написано в комментариях к шагу.
+Научимся переводить математические формулы в вычисления.
 
-Здесь у вас уже есть поле с консолью. Научимся переводить математические формулы в вычисления.
+Если вы еще не поставили python, но уже хотите попробовать работать с ним, то воспользуйтесь **интерактивной консолью** ниже:
 
 <p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
@@ -59,7 +67,7 @@ lesson = 1140056
 
 ### Приоритет операций
 
-Так же, как в математике, умножение **имеет больший приоритет** (главнее, выполняется раньше), чем сложение. Приоритет можно изменить с помощью скобок.
+Так же, как в математике, операции обладают **приоритетом** (например, умножение выполняется раньше, чем сложение). Приоритет можно изменить с помощью скобок.
 
 ```python
 >>> (2 + 3) * (4 + 6)
@@ -85,71 +93,79 @@ lesson = 1140056
 
 Не бойтесь совершать ошибки. Чем больше вы их сделаете, тем быстрее поймете, как исправить новую ошибку.
 
+## SKIP сопоставление
+
+Сопоставьте выражению его результат.
+
+21 / 8 = 2.625
+21 // 8 = 2
+21 % 8 = 5
+21 + 8 = 29
+21 - 8 = 13
+21 * 8 = 168
+
 ## NUMBER Умножение
 
-1. Вычислите в консоли выражение.
+1. Вычислите значение выражения, **используя python**. Ниже дана **интерактивная консоль**; если у вас не стоит python, воспользуйтесь ей.
 2. Скопируйте результат в поле ввода ниже консоли.
 3. Нажмите кнопку *Отправить*
 4. Если решение с ошибками, решите снова, исправив ошибку.
 5. Откроется форум решений. Сходите в него и *прочитайте* авторское решение и интересные решения других студентов. **Посылать свое НЕ НУЖНО.** Свое решение нужно послать в форум, если оно оригинальное. Если ваше решение похоже на уже опубликованные, не засоряйте форум клонами. Мы их будем минусовать. 
 
+Чему равно $$123 \cdot 45$$
+
 <p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
-
-Чему равно $123 \cdot 45$
 
 ANSWER: 5535
 
 ## NUMBER Деление
 
-<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
-
-
 Чему равно $$\frac{2}{5} + \frac{1}{8}$$
+
+<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
 ANSWER: 0.525
 
 ## NUMBER Дроби
 
-<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
-
 
 Чему равно $$2\frac{3}{8} - \frac{1}{16}$$
+
+<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
 ANSWER: 2.3125
 
 ## NUMBER Скобки
 
+Чему равно $$\frac{(82-78)(27 + 53)}{(3 + 7)(16 - 11)}$$
+
 <p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
-
-Чему равно $$2\frac{27 + 53}{(3 + 7)(16 - 11)}$$
-
-ANSWER: 1.6
+ANSWER: 6.4
 
 ## NUMBER Дробные числа
 
-<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
+Чему равно $$0.258 \cdot 12$$
 
-Чему равно $0.258 \cdot 12$
+<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
 ANSWER: 3.096
 
 
 ## NUMBER Степень
 
-<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
+Чему равно $$12^3 + 7^4$$
 
-Чему равно $12^3 + 7^4$
+<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
 ANSWER: 4129
 
 ## NUMBER Степени
 
-<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
-
-
 Чему равно $$4^{3^2}$$
+
+<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
 
 ANSWER: 262144
 

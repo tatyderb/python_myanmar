@@ -127,15 +127,6 @@ ANSWER: 5535
 
 ANSWER: 0.525
 
-## NUMBER Дроби
-
-
-Чему равно $$2\frac{3}{8} - \frac{1}{16}$$
-
-<p><iframe height="356" src="https://trinket.io/embed/python/33e5c3b81b?runOption=console&amp;start=result&amp;runMode=console&amp;showInstructions=true" width="400"></iframe></p>
-
-ANSWER: 2.3125
-
 ## NUMBER Скобки
 
 Чему равно $$\frac{(82-78)(27 + 53)}{(3 + 7)(16 - 11)}$$

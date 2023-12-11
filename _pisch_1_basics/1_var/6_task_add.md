@@ -40,7 +40,7 @@ lesson = 1140284
 
 ### Благодарности
 
-Благодарим [Овсянникову Татьяну Владимировну](https://lbz.ru/metodist/lections/6/nastavniki.php) за создание и поиск подходящих задач.
+Благодарим [Овсянникову Татьяну Владимировну](https://lbz.ru/metodist/lections/6/nastavniki.php) за создание этих замечательных задач.
 
 ## TASKINLINE ![star2](https://stepik.org/media/attachments/lesson/1140054/star2.gif) Понедельники
 

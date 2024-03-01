@@ -285,5 +285,5 @@ C. `a.append(b)`
 D. `a.extend(b)`
 E. `b.extend(a)`
 
-ANSWER: A, B, C, D
+ANSWER: A, B, D
 SHUFFLE: False

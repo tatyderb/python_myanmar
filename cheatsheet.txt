@@ -77,6 +77,40 @@ a, *b, c = line.split()
 string.digits
 string.ascii_letters
 
+=================================== defaultdict =========================
+# страна - список городов.
+
+from collections import defaultdict
+
+s = [('Россия', 'Москва'), ('Китай', 'Пекин'), ('Россия', 'Самара'), ('Россия', 'Тула'), ('Польша', 'Краков')]
+d = defaultdict(list)
+for k, v in s:
+    d[k].append(v)
+print(d.items())
+# dict_items([('Россия', ['Москва', 'Самара', 'Тула']), ('Китай', ['Пекин']), ('Польша', ['Краков'])])
+
+работает быстрее, чем
+d = {}
+for k, v in s:
+    d.setdefault(k, []).append(v)
+
+=============================================  zip / unzip =========================
+employee_numbers = [2, 9, 18, 28]
+employee_names = ["Дима", "Марина", "Андрей", "Никита"]
+
+zipped_values = zip(employee_names, employee_numbers)
+# [('Дима', 2), ('Марина', 9), ('Андрей', 18), ('Никита', 28)]
+
+employees_zipped = [('Дима', 2), ('Марина', 9), ('Андрей', 18), ('Никита', 28)]
+employee_names, employee_numbers = zip(*employees_zipped)
+
+print(employee_names)       # ("Дима", "Марина", "Андрей", "Никита")
+print(employee_numbers)     # (2, 9, 18, 28)
+
+
+ {key: value for key, *value in zip(*rows)}  # [(k1, k2, ..), (v11, v12, ...), ... (vn1, vn2, ...)] => {k1:[v11, v21,..vn1], k2: [v12, v22,.. vn2]..}
+======================================================
+
 open("test.txt", mode="r", encoding="utf-8")
 
 #------------------------ datetime
@@ -117,3 +151,44 @@ delta = timedelta(days=50, seconds=27, microseconds=10, milliseconds=29000, minu
 # есть только атрибуты days, seconds, microseconds
 delta.total_seconds()  # выразим все в секундах
 dt1+dt2, dt1-dt2, dt1*n, dt1/n, dt1/dt2
+
+# timestamp всегда в UTC (таймзона в +0)
+time.time()
+
+=== CSV ==================================
+import csv
+
+with open('products.csv', encoding='utf-8') as file:
+    rows = csv.reader(file, delimiter=';', quotechar='"')
+
+# в виде списка словарей, ключи - содержимое столбцов первой строки (header)
+with open('products.csv', encoding='utf-8') as file:
+    rows = csv.DictReader(file, delimiter=';', quotechar='"')
+
+with open('students.csv', 'w', encoding='utf-8', newline='') as file:
+    writer = csv.writer(file, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
+    writer.writerow(columns)                 # запись заголовков
+    for row in data:                         # запись строк
+        writer.writerow(row)
+
+QUOTE_ALL: указывает объектам записи указывать все поля
+QUOTE_MINIMAL: указывает объектам записи заключать в кавычки только те поля, которые содержат специальные символы, такие как разделитель delimiter, кавычка quotechar или любой из символов в lineterminator
+QUOTE_NONNUMERIC: указывает объектам записи указывать все нечисловые поля
+QUOTE_NONE: указывает объектам записи никогда не заключать в кавычки поля
+
+import csv
+
+data = [{'first_name': 'Тимур', 'second_name': 'Гуев', 'class_number': 11, 'class_letter': 'А'},
+        {'first_name': 'Руслан', 'second_name': 'Чаниев', 'class_number': 9, 'class_letter': 'Б'},
+        {'first_name': 'Роман', 'second_name': 'Белых', 'class_number': 10, 'class_letter': 'В'}]
+
+columns = ['first_name', 'second_name', 'class_number', 'class_letter']
+
+with open('students.csv', 'w', encoding='utf-8', newline='') as file:
+    writer = csv.DictWriter(file, fieldnames=columns, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
+    writer.writeheader()                 # запись заголовков
+    for row in data:                     # запись строк
+        writer.writerow(row)
+        
+    или все сразу строки:
+    writer.writerows(res_rows)

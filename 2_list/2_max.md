@@ -102,14 +102,14 @@ def choose(a):
             xstud = x
         return xstud
 
-a = [2.5, 1.3, 5.7, 7.2, 3.14, 4.5]
+a = [2.5, 4.3, 5.7, 7.2, 3.14, 4.5]
 my = choose(a)
 print(my)        
 ```
 
 Какой арбуз у него в my?
 
-ANSWER: 1.3
+ANSWER: 4.3
 
 ## NUMBER Поспешил
 

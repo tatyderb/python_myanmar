@@ -6,6 +6,13 @@
 * [https://vk.com/pnpgameschat](https://vk.com/pnpgameschat)
 * [https://t.me/Printandplaygame](https://t.me/Printandplaygame)
 
+## live coding
+
+* UNO
+    * https://www.youtube.com/watch?v=sA5CtiLiD7M - обзор от Игроведа
+    * https://boardgamearena.com/gamepanel?game=solo 
+    * https://unoonline.co/
+
 ## Игры
 
 Всего игр **23**

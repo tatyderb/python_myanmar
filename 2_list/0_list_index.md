@@ -258,7 +258,7 @@ TEST
 Можно считать номер ячейки сзади. Начинаем с -1.
 
 ```python
-a = [3, 4, 2, 0 1]
+a = [3, 4, 2, 0, 1]
 ```
 
 ![Коробка с мячами](https://stepik.org/media/attachments/lesson/417606/array1.png)

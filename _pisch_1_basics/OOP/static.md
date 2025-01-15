@@ -374,7 +374,7 @@ class Circle:
         self.radius = radius
         
     @staticmethod
-    is_valid(x, y, radius):
+    def is_valid(x, y, radius):
         if radius <= 0:
             return False
         return True        
